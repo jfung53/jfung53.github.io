@@ -117,19 +117,19 @@ ul li {
     text-decoration: none;
 }
 
-.flex-aboutme {
-    display: flex;
-    width: 512px;
-    flex-direction: column;
-    grid-gap: 32px;
-}
-
 .flex-aboutme-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 32px;
+}
+
+.flex-aboutme {
+    display: flex;
+    width: 512px;
+    flex-direction: column;
+    grid-gap: 32px;
 }
 
 .flex-bio {
@@ -197,6 +197,7 @@ ul li {
 
 .bio-photo {
     float: right;
+    margin: 16px;
 }
 
 #footer {
