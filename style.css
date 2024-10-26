@@ -52,6 +52,10 @@ ul li {
     flex-direction: column;
 }
 
+.flex-main a:hover {
+    color: #E5FF00;
+}
+
 .nav {
     margin-left: 0; 
 }
