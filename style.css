@@ -74,6 +74,10 @@ ul li {
     color: #E5FF00;
 }
 
+.menu a:visited {
+    color: darkgrey;
+}
+
 .flex-projects {
     display: flex;
     flex-direction: column;
