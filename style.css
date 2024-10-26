@@ -1,108 +1,205 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+/*
 * {
     border: 1px dashed red;
 }
-
-img {
-    float: left;
-    width: 256px;
-    padding: 16px;
-}
-
-#topnav {
-    width: 100%;
-    height: 72px;
-    text-align: center;
-    background-color: red;
-}
-
-#sidebar {
-    width: 18%;
-    float: left;
-    padding: 8px;
-    margin: 16px;
-}
-
-#main {
-    width: 72%;
-    background-color: white;
-    float: right; 
-    padding: 8px;
-    margin: 16px;
-}
-
-#footer {
-    clear: both; /* clears previous floats */
-    height: 100px;
-    text-align: center;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    background-color: #272325;
-}
-
-
+*/
 
 body {
-    background: #FFF6E6;
-    font-family: Figtree, Arial, Helvetica, sans-serif;
-/*    color: #272325;*/
+    width: 80%;
+    margin: auto;
+    padding-top: 128px;
+    background: #272325;
+    font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+    color: floralwhite;
     line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    /* color: #F44336; */
-    color: #272325;
-    font-weight: 700;
-    line-height: 1.3;
+h1, h4, h5 {
+    color: floralwhite;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+h3 {
+    font-weight: 400;
 }
 
 h6 {
+    margin: 0;
+    font-weight: 400;
     opacity: 40%;
     text-transform: uppercase;
 }
 
-p {
+a {
+    color: floralwhite;
 }
 
-a {
-    color: black;
+/*
+ul li {
+	list-style: none;
+}
+*/
+
+.flex-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    margin-left: 0; 
+}
+
+.menu {
+    float: right;
+    color: dimgrey;
+}
+
+.menu a:link {
+    color: red;
+    text-decoration: none;
+}
+
+.menu a:active {
+    color: floralwhite;
+}
+
+.menu a:hover {
+    color: #E5FF00;
+}
+
+.flex-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-gap: 96px;
+    margin-bottom: 256px;
+}
+
+.project-category {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-gap: 64px;
+    align-self: stretch;
+}
+
+.items {
+    display: flex;
+    height: 192px;
+    align-items: center;
+    grid-gap: 56px;
+    align-self: stretch;
+}
+
+.item {
+    display: flex;
+    width: 192px;
+    height: 100%;
+    padding: 32px;
+    background-color: #E5FF00;
+    color: #272325;
+    font-weight: 500;
+}
+
+.item a {
+    color: #272325;
+    text-decoration: none;
+}
+
+.flex-aboutme {
+    display: flex;
+    width: 512px;
+    flex-direction: column;
+    grid-gap: 32px;
+}
+
+.flex-aboutme-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 32px;
+}
+
+.flex-bio {
+    display: flex;
+    width: 512;
+    flex-direction: column; 
+}
+
+.flex-resume {
+    display: flex;
+    width: 512px;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-gap: 56px;
+    margin-bottom: 256px;
+}
+
+.flex-jobs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.job-name {
+    line-height: 1.5;
+}
+
+.employer {
+    font-size: .9em;
+}
+
+.project-titles {
+    font-size: .9em;
+    font-style: oblique;
     font-weight: 600;
 }
 
-.dot-blue {
-    height: 48px;
-    width: 48px;
-    background-color: blue;
-    border-radius: 50%;
-    display: inline-block;
+.job-description {
+    font-size: .8em;
+    font-weight: 400;
+    opacity: 50%;
 }
-.dot-teal {
-    height: 48px;
-    width: 48px;
-    background-color: #26e9bd;
+
+.dot-yellow {
+    height: 32px;
+    width: 32px;
+    background-color: #E5FF00;
     border-radius: 50%;
     display: inline-block;
+    vertical-align: middle;
 }
-.dot-purple {
-    height: 48px;
-    width: 48px;
-    background-color: #91159c;
+
+.dot-yellow-a {
+    height: 12px;
+    width: 12px;
+    background-color: #E5FF00;
     border-radius: 50%;
     display: inline-block;
+    vertical-align: baseline;
 }
-.dot-red {
-    height: 48px;
-    width: 48px;
-    background-color: orangered;
-    border-radius: 50%;
-    display: inline-block;
+
+.toolkit {
+    font-size: 18px;
 }
-.dot-black {
-    height: 48px;
-    width: 48px;
-    background-color: #272325;
-    border-radius: 50%;
-    display: inline-block;
+
+.bio-photo {
+    float: right;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    padding: 16px;
+    background: #272325;
 }
