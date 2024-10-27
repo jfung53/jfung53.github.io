@@ -41,12 +41,6 @@ a {
     color: floralwhite;
 }
 
-/*
-ul li {
-	list-style: none;
-}
-*/
-
 .flex-main {
     display: flex;
     flex-direction: column;
@@ -173,6 +167,10 @@ ul li {
     opacity: 50%;
 }
 
+.job-description ul {
+    list-style: inside;
+}
+
 .dot-yellow {
     height: 32px;
     width: 32px;
@@ -191,11 +189,11 @@ ul li {
     vertical-align: baseline;
 }
 
-.toolkit {
+#toolkit {
     font-size: 18px;
 }
 
-.bio-photo {
+#bio-photo {
     float: right;
     margin: 16px;
 }
