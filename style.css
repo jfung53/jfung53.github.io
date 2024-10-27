@@ -128,7 +128,7 @@ a {
 
 .flex-bio {
     display: flex;
-    width: 512;
+    width: 512px;
     flex-direction: column; 
 }
 
