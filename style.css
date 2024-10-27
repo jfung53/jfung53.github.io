@@ -108,7 +108,6 @@ a {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: flex-start;
     padding-top: 32px;
 }
 
@@ -129,7 +128,6 @@ a {
     display: flex;
     width: 512px;
     flex-direction: column;
-    align-items: flex-start;
     grid-gap: 56px;
     margin-bottom: 256px;
 }
@@ -137,7 +135,6 @@ a {
 .flex-jobs {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .job-name {
