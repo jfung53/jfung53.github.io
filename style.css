@@ -39,6 +39,7 @@ h6 {
 
 a {
     color: floralwhite;
+    text-decoration: none;
 }
 
 .flex-main {
@@ -84,31 +85,23 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    grid-gap: 64px;
-    align-self: stretch;
 }
 
 .items {
     display: flex;
-    height: 192px;
     align-items: center;
     grid-gap: 56px;
-    align-self: stretch;
+    margin-top: 16px;
 }
 
 .item {
     display: flex;
     width: 192px;
-    height: 100%;
+    height: 192px;
     padding: 32px;
     background-color: #E5FF00;
     color: #272325;
     font-weight: 500;
-}
-
-.item a {
-    color: #272325;
-    text-decoration: none;
 }
 
 .flex-aboutme-container {
