@@ -90,6 +90,7 @@ a:hover {
     gap: 24px;
     align-items: center;
     font-size: 40px;
+    color: yellow;
     text-transform: uppercase;
     white-space: pre;
 }
@@ -97,11 +98,23 @@ a:hover {
 .socials p {
     margin: 0;
     color: yellow;
-    transition: color 0.3s ease;
+    /* transition: color 0.3s ease; */
 }
 
-.socials p:hover {
-    color: #4d55ff;
+/* for chrome and safari ios */
+.socials a,
+.socials a:link,
+.socials a:visited {
+    color: yellow;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: lightyellow;
+}
+
+.socials a:visited {
+    color: yellow;
 }
 
 .subtitle {
@@ -263,7 +276,7 @@ a:hover {
     justify-content: center;
     gap: 8px;
     height: 40px;
-    padding: 4px 24px;
+    padding: 8px 24px 4px 24px;
     border-radius: 20px;
     overflow: hidden;
     flex-shrink: 0;
@@ -296,7 +309,7 @@ a:hover {
     display: flex;
     gap: 16px;
     align-items: center;
-    white-space: pre;
+    white-space: normal;
 }
 
 .award .icon {
@@ -308,10 +321,11 @@ a:hover {
 
 .award-text {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.5;
     letter-spacing: 0.96px;
     margin: 0;
+    white-space: normal;
 }
 
 /* responsiveness */
@@ -378,6 +392,10 @@ a:hover {
     
     .project-content {
         padding: 24px;
+    }
+
+    .award {
+        align-items: flex-start;
     }
 }
 
