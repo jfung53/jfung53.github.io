@@ -1,31 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Portfolio - Jocelyn Fung</title>
+        <title>Jocelyn Fung</title>
         <meta charset="utf-8">
-        <meta name="description" content="info 654 web basics project">
-        <meta name="keywords" content="webpage, school">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="portfolio">
         <meta name="author" content="Jocelyn Fung">
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
-        <div class="flex-main">
-            <h1>Hi, I'm Jocelyn.</h1>
-            <h2>I’m a multi-disciplinary designer, data analyst, and data humanist.</h2>
-
-            <h2>
-                <a href="projects/"><span class="dot-yellow"></span></a> <a href="projects/">Projects</a>
-            </h2>
-            <h2>
-                <a href="resume/"><span class="dot-yellow"></span></a> <a href="resume/">Resume</a>
-            </h2>
-            <h2>
-                <a href="aboutme/"><span class="dot-yellow"></span></a> <a href="aboutme/">About Me</a>
-            </h2>
-        </div>
-            <div id="footer">
-                <h6>&copy; Jocelyn Fung 2024</h6>
+        <div class="container">
+            <div class="desktop">
+                <div class="content">
+                    <!-- Header Section -->
+                    <header class="header">
+                        <div class="title-bar">
+                            <h1 class="main-title">Jocelyn Fung</h1>
+                            <div class="socials">
+                                <p><a href="https://www.linkedin.com/in/jocelynfung/"><i class="fab fa-linkedin"></i></a></p>
+                                <p><a href="https://www.instagram.com/itsjocelynfung/"><i class="fab fa-instagram"></i></a></p>
+                                <p><a href="https://github.com/jfung53"><i class="fab fa-github"></i></a></p>
+                            </div>
+                        </div>
+                        <p class="subtitle">Data Visualizer | Designer | Artist | Analyst</p>
+                        <div class="location">
+                            <p class="icon"><i class="fas fa-map-marker-alt"></i></p>
+                            <p class="location-text">Brooklyn NY</p>
+                        </div>
+                        <div class="blurb">
+                            <div class="blurb-item">
+                                <p class="bullet">✦</p>
+                                <p class="blurb-text">Asking questions about people and places</p>
+                            </div>
+                            <div class="blurb-item">
+                                <p class="bullet">✦</p>
+                                <p class="blurb-text">Writing scripts to make computers do things for me</p>
+                            </div>
+                            <div class="blurb-item">
+                                <p class="bullet">✦</p>
+                                <p class="blurb-text">Former creative director and UI/UX designer in video games</p>
+                            </div>
+                        </div>
+                    </header>
+    
+                    <!-- Projects Section -->
+                    <div class="projects">
+                        <!-- School Shootings Project -->
+                        <div class="project-card full-width">
+                            <div class="project-content">
+                                <div class="award">
+                                    <p class="icon"><i class="fas fa-trophy"></i></p>
+                                    <p class="award-text">Pratt InfoShow 2025 Winner - Best Individual Project</p>
+                                </div>
+                                <h2 class="project-title">Are school shootings rates higher in areas where misogynist search topics are trending? </h2>
+                                <div class="project-image"></div>
+                                <div class="chips">
+                                    <span class="chip filled">ArcGIS</span>
+                                    <span class="chip filled">R</span>
+                                    <span class="chip filled">RAWgraphs</span>
+                                    <span class="chip outline">Google Trends</span>
+                                    <span class="chip outline">US Census</span>
+                                    <span class="chip outline">K-12 SSDB</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Row 1: Citi Bikes & Masculinity Bot -->
+                        <div class="project-row">
+                            <div class="project-card half-width">
+                                <div class="project-content">
+                                    <h2 class="project-title">Are kids under age 16 using Citi Bikes?</h2>
+                                    <div class="project-image"></div>
+                                    <div class="chips">
+                                        <span class="chip filled">ArcGIS</span>
+                                        <span class="chip filled">R</span>
+                                        <span class="chip outline">NYC DOE</span>
+                                        <span class="chip outline">Citi Bike</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card half-width">
+                                <div class="project-content">
+                                    <h2 class="project-title">Training an LLM on what it means to be a man</h2>
+                                    <div class="project-image"></div>
+                                    <div class="chips">
+                                        <span class="chip filled">Python</span>
+                                        <span class="chip filled">Scrapy</span>
+                                        <span class="chip filled">GPT-2</span>
+                                        <span class="chip outline">GQ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Evictions Project -->
+                        <div class="project-card full-width">
+                            <div class="project-content">
+                                <h2 class="project-title">Are residential eviction rates higher in areas with more single mothers? </h2>
+                                <div class="project-image"></div>
+                                <div class="chips">
+                                    <span class="chip filled">ArcGIS</span>
+                                    <span class="chip filled">R</span>
+                                    <span class="chip outline">US Census</span>
+                                    <span class="chip outline">NYC Open Data</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Row 2: Poop Pools & Georeference -->
+                        <div class="project-row">
+                            <div class="project-card half-width">
+                                <div class="project-content">
+                                    <h2 class="project-title">Do larger pools have more poop incidents?</h2>
+                                    <div class="project-image"></div>
+                                    <div class="chips">
+                                        <span class="chip filled">Python</span>
+                                        <span class="chip filled">Chart.js</span>
+                                        <span class="chip outline">NYC Open Data</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card half-width">
+                                <div class="project-content">
+                                    <h2 class="project-title">Geo-referencing a historical race map</h2>
+                                    <div class="project-image"></div>
+                                    <div class="chips">
+                                        <span class="chip filled">ArcGIS</span>
+                                        <span class="chip filled">R</span>
+                                        <span class="chip outline">NYPL</span>
+                                        <span class="chip outline">US Census</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- SHSAT Project -->
+                        <div class="project-card full-width">
+                            <div class="project-content">
+                                <h2 class="project-title">Which middle school demographics predict shsat test taking rates?</h2>
+                                <div class="project-image"></div>
+                                <div class="chips">
+                                    <span class="chip filled">R</span>
+                                    <span class="chip outline">NYC DOE</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Coming Soon: Chinese Restaurants -->
+                        <div class="project-card full-width coming-soon">
+                            <div class="project-content">
+                                <p class="coming-soon-label">COMING SOON</p>
+                                <h2 class="project-title">Predicting Chinese American restaurant names and menu items by region</h2>
+                                <div class="chips">
+                                    <span class="chip filled">Python</span>
+                                    <span class="chip filled">Machine Learning</span>
+                                    <span class="chip filled">SpaCy</span>
+                                    <span class="chip outline">Foursquare Open Places</span>
+                                    <span class="chip outline">Kaggle</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Coming Soon: Rural Distribution -->
+                        <div class="project-card full-width coming-soon">
+                            <div class="project-content">
+                                <p class="coming-soon-label">COMING SOON</p>
+                                <h2 class="project-title">Rural distribution of Chinese restaurants across Canada and the U.S.</h2>
+                                <div class="chips">
+                                    <span class="chip filled">Python</span>
+                                    <span class="chip filled">ArcGIS</span>
+                                    <span class="chip outline">Foursquare Open Places</span>
+                                    <span class="chip outline">NCES</span>
+                                    <span class="chip outline">Statistics Canada</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Footer -->
+                        <div class="footer">
+                            <h6>&copy; Jocelyn Fung 2025</h6>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
     </body>
 </html>
