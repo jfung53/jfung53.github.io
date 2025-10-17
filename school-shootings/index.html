@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>School Shootings - Jocelyn Fung</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="portfolio">
+        <meta name="author" content="Jocelyn Fung">
+        <link rel="stylesheet" type="text/css" href="../reset.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    </head>
+
+    <body class="portfolio-page school-shootings-page">
+        <div class="container">
+            <div class="desktop">
+                <div class="content">
+                    
+                    <!-- Top Header with Navigation -->
+                    <header class="portfolio-header">
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name">Jocelyn Fung</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                        <div class="dotted-line"></div>
+                    </header>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <h1 class="portfolio-title">Are school shootings rates higher in areas where misogynist search topics are trending? </h1>
+                        
+                        <div class="award">
+                            <p class="icon"><i class="fas fa-trophy"></i></p>
+                            <p class="award-text">Pratt InfoShow 2025 Winner - Best Individual Project</p>
+                        </div>
+                        
+                        <div class="chips">
+                            <span class="chip filled">ArcGIS</span>
+                            <span class="chip filled">R</span>
+                            <span class="chip filled">RAWgraphs</span>
+                            <span class="chip outline">Google Trends</span>
+                            <span class="chip outline">US Census</span>
+                            <span class="chip outline">K-12 SSDB</span>
+                        </div>
+
+                        <p class="intro-text">96% of school shooting perpetrators are male. I looked for a correlation between Google search interest in Manosphere-related topics and areas with higher rates of school shootings.</p>
+
+                        <p class="intro-text">The answer: it's complicated. I found an anti-correlation. </p>
+
+                        <div class="content-warning">
+                            <p class="icon"><i class="fas fa-exclamation-triangle"></i></p>
+                            <p class="warning-text">Content Warning: Mentions of violence, discrimination, and self-harm.</p>
+                        </div>
+
+                        <div class="image-with-caption">
+                            <div class="image-placeholder"></div>
+                            <p class="caption">School shootings have seen a sharp increase over the past few years.  Source: K-12 School Shootings Database.</p>
+                        </div>
+
+                        <h3 class="section-title">Where are school shootings more likely to occur?</h3>
+
+                        <div class="body-text">
+                            <p>Since 2017, the number of school shootings per year has more than <strong>tripled</strong> compared to previous decades.  </p>
+                            <p>&nbsp;</p>
+                            <p>I was curious about where this is happening.  It's quite hard to find a map of school shooting incidents that is normalized by population density, so I made one.  </p>
+                            <p>&nbsp;</p>
+                            <p>I used data from the <a href="https://k12ssdb.org/" target="_blank">K-12 School Shootings database</a> by David Riedman which dates back to 1966.  It includes a detailed list of over 3000 shooting incidents, which I compared to similar datasets from the <a href="https://github.com/washingtonpost/data-school-shootings" target="_blank">Washington Post</a> and the <a href="https://www.gunviolencearchive.org/" target="_blank">Gun Violence Archive</a> to rule out any data collection biases.  </p>
+                        </div>
+
+                        <div class="image-with-caption">
+                            <div class="image-placeholder"></div>
+                            <p class="caption">School shooting incidents per 100,000 people.  Larger dots represent higher rates. </p>
+                        </div>
+
+                        <div class="body-text body-text-small">
+                            <p>Areas of the <strong>Midwest</strong> and the <strong>South</strong> are much more likely to experience school shootings.  </p>
+                            <p>&nbsp;</p>
+                            <p>This is a significantly different pattern from most maps of school shooting numbers which show the highest concentrations in densely populated areas like New York City, Chicago, and parts of California. </p>
+                        </div>
+
+                        <h3 class="section-title">The Manosphere</h3>
+
+                        <div class="body-text">
+                            <p>During this same time frame, <strong>extreme misogynist movements</strong> have been proliferating and prospering online. </p>
+                            <p>&nbsp;</p>
+                            <p>These movements have conglomerated into a loose network called the <strong>Manosphere</strong>.  It includes online communities, forums, subreddits, influencers, podcasters, and streamers who have often been linked with online harassment and violence in the real world, as well as extremist political organizations. Analysis of these movements has shown that the newer communities (Incels, Men Going Their Own Way, and The Red Pill) are far more toxic and misogynistic than the older ones (<span class="underline">Ribeiro et al., 2021</span>). </p>
+                        </div>
+
+                        <div class="image-with-caption">
+                            <div class="image-placeholder"></div>
+                            <div class="caption">
+                                <p>A timeline of Manosphere movements. Thicker lines represent the height of a movement's popularity.  </p>
+                                <p>Source: The Evolution of the Manosphere across the Web (Ribeiro et al., 2021).</p>
+                            </div>
+                        </div>
+
+                        <div class="body-text">
+                            <p>Could there be a spatial relationship between where these topics are trending in Google searches and where school shootings have increased?  </p>
+                            <p>&nbsp;</p>
+                            <p>My hypothesis was that they are happening in the same places. </p>
+                            <p>&nbsp;</p>
+                            <p>A <a href="https://psycnet.apa.org/record/2003-00864-010" target="_blank">2004 study</a> found that rampage-style school shootings were not a national problem, but series of local problems that occurred in "red states," where perpetrators were boys who were mercilessly and routinely bullied, and that their violence was retaliatory against threats to their manhood.  It appears that this may still be relevant twenty years later.  </p>
+                            <p>&nbsp;</p>
+                            <p>A 2024 <a href="https://www.pewresearch.org/social-trends/2024/10/17/how-americans-see-men-and-masculinity/" target="_blank">Pew Research survey</a> on how Americans see men and masculinity found partisan differences in views, in which "Republican men stand out in views of their own masculinity, changing gender roles and men's progress in recent decades."  </p>
+                        </div>
+
+                        <div class="quotation">
+                            <div class="quote-line"></div>
+                            <div class="quote-content">
+                                <p class="quote-text">"Masculinity is the single greatest risk factor in school violence. This uniformity cuts across all other differences among the shooters."</p>
+                                <p class="quote-author">Adolescent Masculinity, Homophobia, and Violence: Random School Shootings 1982-2001 by Michael S. Kimmel and Matthew Mahler.</p>
+                            </div>
+                        </div>
+
+                        <h3 class="section-title">Looking for patterns in Google Trends</h3>
+
+                        <p class="body-text">To find out where people are Googling these topics, I whittled down a list of terms and websites using replication data from a study, The Manosphere and Politics (<a href="https://doi.org/10.1177/00104140241312095" target="_blank">Barnes & Karim, 2025</a>), and entered as many as possible into the Google Trends tool.  </p>
+
+                        <p class="body-text">Google Trends <a href="https://medium.com/google-news-lab/what-is-google-trends-data-and-what-does-it-mean-b48f07342ee8" target="_blank">normalizes each search term</a> and indexes the results from 0 to 100, where 100 is the maximum search  interest for the time and location selected.  Spikes in the data represent an acceleration in popularity, relative search interest in the topic compared with itself.</p>
+
+                        <p class="body-text">Interestingly, many of the keywords did not have sufficient data.  This might be because of the fringe nature of extremist groups.  I settled on a handful of topics, one for each Manosphere category, that had the best quality data for popularity.  </p>
+
+                        <h3 class="section-title">Results</h3>
+
+                        <p class="intro-text">The results were <strong>not</strong> what I expected. As if I had tried to mix oil and  water, search interest hot spots seemed to be avoiding areas with higher rates of school shootings.</p>
+
+                        <p class="intro-text">These maps show statistically significant Google Trends hot spots (Getis-Ord Gi* statistic, in blue) and school shooting incidents per 100,000 people (red).  </p>
+
+                        <p class="body-text"><strong>Note</strong>: there is an absence of data from Connecticut and the bottom tip of Illinois. </p>
+
+                        <div class="image-two-wide">
+                            <div class="image-with-caption">
+                                <div class="image-placeholder"></div>
+                                <p class="caption">Search term:  The Red Pill</p>
+                            </div>
+                            <div class="image-with-caption">
+                                <div class="image-placeholder"></div>
+                                <p class="caption">Search term:  A Voice for Men, one of the most popular Men's Rights Activists blogs</p>
+                            </div>
+                        </div>
+
+                        <div class="image-two-wide">
+                            <div class="image-with-caption">
+                                <div class="image-placeholder"></div>
+                                <p class="caption">Search term:  Jordan Peterson.  This period of popularity data coincides with the rising popularity of Incel and MGTOW movements.</p>
+                            </div>
+                            <div class="image-with-caption">
+                                <div class="image-placeholder"></div>
+                                <p class="caption">Search topic:  Incel.  Search topics are broader concepts of related terms, including misspellings, while search terms are exact phrases.  </p>
+                            </div>
+                        </div>
+
+                        <div class="image-two-wide">
+                            <div class="image-with-caption">
+                                <div class="image-placeholder"></div>
+                                <p class="caption">Search term:  Men Going Their Own Way.  According to the <a href="https://www.theguardian.com/lifeandstyle/2020/aug/26/men-going-their-own-way-the-toxic-male-separatist-movement-that-is-now-mainstream" target="_blank">Guardian</a>, the extremist men of MGTOW are focused on the dangers of interacting with women and condone domestice violence.</p>
+                            </div>
+                            <div class="image-with-caption">
+                                <div class="image-placeholder"></div>
+                                <p class="caption">Search topic:  Looksmax.org.  The most active Incel community in recent years, veiled as a self-improvement forum.  "Failed" men may be actively encouraged to self-harm.  </p>
+                            </div>
+                        </div>
+
+                        <div class="body-text body-text-small">
+                            <p>Output classifications: </p>
+                            <p>&nbsp;</p>
+                            <p class="classification">Cold Spot with 99% Confidence (black holes)</p>
+                            <p class="classification">Cold Spot with 95% Confidence</p>
+                            <p class="classification">Cold Spot with 90% Confidence</p>
+                            <p class="classification">Not Significant (dark blue areas)</p>
+                            <p class="classification">Hot Spot with 90% Confidence</p>
+                            <p class="classification">Hot Spot with 95% Confidence </p>
+                            <p class="classification">Hot Spot with 99% Confidence (bright blue areas)</p>
+                        </div>
+
+                        <h3 class="section-title">Interpretations</h3>
+
+                        <div class="body-text">
+                            <p>I had to accept the null hypothesis: that there are no spatial relationships to be found.  </p>
+                            <p>&nbsp;</p>
+                            <p>However, a <strong>secondary hypothesis</strong> had emerged: that there may actually be a correlation but with <strong>cold spots</strong>, not hot spots.</p>
+                            <p>&nbsp;</p>
+                            <p>To understand this I needed to correct how I was <strong>interpreting popularity on Google Trends</strong>.  These hot spots, or spikes, are markers of acceleration of search interest in a topic.  According to <a href="https://medium.com/google-news-lab/what-is-google-trends-data-and-what-does-it-mean-b48f07342ee8" target="_blank">this explanatory article by Simon Rogers</a>, a data journalist at Google, they are often a reflection of what's going on in the world.  The hot spots are <strong>reactions</strong> to a topic that entered the public consciousness, via the news, for example, but I had been considering them as spikes in the activity of the topic itself. What these maps may demonstrate is spikes of interest in areas where these concepts are making headlines and internet users are compelled to <strong>learn more</strong>. The partisan nature of news in America may also explain where the spikes are taking place.</p>
+                            <p>&nbsp;</p>
+                            <p>So what is the relationship between the Manosphere and school shootings? </p>
+                            <p>&nbsp;</p>
+                            <p>While it may be easy to visualize a connection between school violence the dangerous ideas promoted by Manosphere figures, I am not suggested causality. Millions of viewers  may be drawn to these ideologies, but most of them are not committing  violent acts. Rather, maybe it points to the wider problem of a state-advocated hegemonic toxic masculinity that rejects the idea of  gender pluralism, takes pride in homophobia, and is supported by movements and people who use violence and harassment to solve problems.  This hegemony "staunchly enforces heterosexuality as the only acceptable form" of masculinity and "operates as an ideal that few, if  any, men can realistically attain" (<a href="https://www.mdpi.com/2076-0760/5/2/18" target="_blank">Schmitz and Kazyak, 2016</a>), carving pathways in the direction towards harmful online communities that purport to help men.</p>
+                        </div>
+
+                        <h3 class="section-title">Further Analysis</h3>
+
+                        <div class="body-text">
+                            <p>I'm not finished with the analysis for this project, there is so much more that could be added to this complex topic.</p>
+                            <p>&nbsp;</p>
+                            <p>First, I'd like to improve the quantitative aspect and calculate the correlation coefficients between Trends cold spots and higher rates of school shootings, as there does appear to be a relationship there.  </p>
+                            <p>&nbsp;</p>
+                            <p>It was also suggested that I find DNS location data for Manosphere website visitors, but this is not publicly accessible for privacy reasons.  </p>
+                            <p>&nbsp;</p>
+                            <p>Next, I'd like to add data about gun laws across the country as I believe there is a spatial correlation there as well.  An abundance of firearms is another very American problem.</p>
+                        </div>
+
+                        <div class="image-with-caption">
+                            <div class="image-placeholder"></div>
+                            <p class="caption">The estimated number of civilian-held legal and illicit firearms per 100 people in 2017.  Source: Small Arms Survey and Government of Canada.</p>
+                        </div>
+
+                        <div class="quotation">
+                            <div class="quote-line"></div>
+                            <div class="quote-content">
+                                <p class="quote-text">"A variety of causes may contribute to school shootings, and therefore no single dynamic is sufficient to explain all, or even a subset, of such events. The causes may emerge from a variety of levels, ranging from the individual causes, community contexts, and social/cultural contexts in which the events occur."</p>
+                                <p class="quote-author">Research in School Shootings, Glenn Muschert, 2007.</p>
+                            </div>
+                        </div>
+
+                        <div class="dotted-line"></div>
+
+                        <p class="body-text">This project was the culmination of final projects for my Spring 2025 semester at Pratt Institute. </p>
+
+                        <div class="credits">
+                            <p>INFO 609 Intro to GIS</p>
+                            <p>Professor John Lauermann</p>
+                            <p>&nbsp;</p>
+                            <p>INFO 658 Information Visualization</p>
+                            <p>Professor Chris Alen Sula</p>
+                            <p>&nbsp;</p>
+                            <p>INFO 664 Programming for Cultural Heritage</p>
+                            <p>Professor John Decker</p>
+                        </div>
+
+                        <p class="body-text">For more details about my methodology and supporting research, please visit my <a href="https://storymaps.arcgis.com/stories/3d5450bc2c104526a43cd5a854dad56d" target="_blank">dedicated storymap site</a>. </p>
+
+                    </article>
+
+                    <!-- Bottom Footer with Navigation -->
+                    <footer class="portfolio-footer">
+                        <div class="dotted-line"></div>
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name">&copy; Jocelyn Fung 2025</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                                <p><a href="../citi-bikes/index.html"><span class="bracket">[ </span><span class="nav-label">Next Project</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Evictions Single Moms - Jocelyn Fung</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="portfolio">
+        <meta name="author" content="Jocelyn Fung">
+        <link rel="stylesheet" type="text/css" href="../reset.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    </head>
+
+    <body class="portfolio-page evictions-page">
+        <div class="container">
+            <div class="desktop">
+                <div class="content">
+                    
+                    <!-- Top Header with Navigation -->
+                    <header class="portfolio-header">
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name">Jocelyn Fung</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                        <div class="dotted-line"></div>
+                    </header>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <h1 class="portfolio-title">Are residential eviction rates higher in areas with more single mothers? </h1>
+                        
+                        <div class="chips">
+                            <span class="chip filled">ArcGIS</span>
+                            <span class="chip filled">R</span>
+                            <span class="chip outline">US Census</span>
+                            <span class="chip outline">NYC Open Data</span>
+                        </div>
+
+                        <p class="intro-text">The answer: without a doubt.</p>
+
+                        <div class="image-with-caption">
+                            <div class="image-placeholder"></div>
+                            <p class="caption">Heat map of residential evictions and rates of single mothers in NYC, 2024. </p>
+                        </div>
+
+                        <div class="body-text">
+                            <p>The NYC Open Data Portal publishes a detailed dataset on pending, scheduled, and executed evictions within the five boroughs. I wanted to see how eviction patterns affect women, especially single mothers.  </p>
+                            <p>&nbsp;</p>
+                            <p>According to the 2012 study <a href="https://www.zotero.org/google-docs/?GG6oOj" target="_blank">Eviction and the Reproduction of Urban Poverty</a>, eviction is to women what incarceration is to men, a typical, systemic occurrence that affects poor black women disproportionately.</p>
+                        </div>
+
+                        <h3 class="section-title">Data</h3>
+
+                        <div class="body-text">
+                            <p>I removed all commercial evictions and was left with 15,473 residential evictions in 2024.  I mapped this data as a heat map in ArcGIS and found hot spots in areas of the Bronx, and Flatbush, East New York, and Brownsville in Brooklyn.  </p>
+                            <p>&nbsp;</p>
+                            <p>I brought in US Census data (ACS 2022) to get the percentage of single mothers per census tract, encoding this as circle size.  </p>
+                        </div>
+
+                        <h3 class="section-title">Results</h3>
+
+                        <p class="intro-text">The map suggests that there is indeed a relationship between residential evictions and higher rates of single motherhood.  This supports <a href="https://doi.org/10.1177/0002716221991458" target="_blank">this explanation of eviction patterns</a> that says eviction is a spatially clustered, endemic feature of neighborhood disadvantage, especially in a city like New York.  </p>
+
+                    </article>
+
+                    <!-- Bottom Footer with Navigation -->
+                    <footer class="portfolio-footer">
+                        <div class="dotted-line"></div>
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name">&copy; Jocelyn Fung 2025</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                                <p><a href="../pool-incidents/index.html"><span class="bracket">[ </span><span class="nav-label">Next Project</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

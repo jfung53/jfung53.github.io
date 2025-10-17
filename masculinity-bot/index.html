@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Masculinity Bot - Jocelyn Fung</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="portfolio">
+        <meta name="author" content="Jocelyn Fung">
+        <link rel="stylesheet" type="text/css" href="../reset.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    </head>
+
+    <body class="portfolio-page masculinity-bot-page">
+        <div class="container">
+            <div class="desktop">
+                <div class="content">
+                    
+                    <!-- Top Header with Navigation -->
+                    <header class="portfolio-header">
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name">Jocelyn Fung</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                        <div class="dotted-line"></div>
+                    </header>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <h1 class="portfolio-title">Training an LLM on what it means to be a man</h1>
+                        
+                        <div class="chips">
+                            <span class="chip filled">Python</span>
+                            <span class="chip filled">Scrapy</span>
+                            <span class="chip filled">GPT-2</span>
+                            <span class="chip outline">GQ</span>
+                        </div>
+
+                        <p class="intro-text">I made a bot to tell me what masculinity is by fine-tuning GPT-2 on 8,000 articles scraped from GQ magazine. </p>
+
+                        <div class="image-with-caption">
+                            <div class="image-frame">
+                                <div class="image-placeholder"></div>
+                                <div class="image-placeholder"></div>
+                                <div class="image-placeholder"></div>
+                            </div>
+                            <p class="caption">Examples of images that my bot generates.</p>
+                        </div>
+
+                        <div class="body-text">
+                            <p>What does it mean to be a man?</p>
+                            <p>&nbsp;</p>
+                            <p>My original idea for this project involved scraping more than just <a href="https://www.gq.com" target="_blank">GQ magazine</a>.  I intended on including Men's Health and Men's Journal as well, but was not successful at web scraping those two.  GQ, however, allowed me to scrape about 8,000 articles in one go. </p>
+                            <p>&nbsp;</p>
+                            <p>In this project I use machine learning to examine what masculinity is.  </p>
+                        </div>
+
+                        <h3 class="section-title">Web Scraping</h3>
+
+                        <p class="body-text">Most men's magazines have similar topics.  Health, style, gear, entertainment, news, grooming, parenting, and relationships.  I narrowed down the ones that appeared across more than one magazine, then I used the Python library <strong>Scrapy</strong> to crawl through the GQ website.  I gathered topics, titles, dates, and the full text of each article.  </p>
+
+                        <h3 class="section-title">Natural Language Processing</h3>
+
+                        <div class="body-text">
+                            <p>To create a dataset for training, I had to clean up the scraped articles.  I removed all the sponsored content which was conveniently tagged as a topic.  I used the NLP Python library <strong>SpaCy</strong> to process all of this article texts.  Virgil Abloh and John Galliano are both mentioned a lot.  GQ is primarily a style magazine, after all. </p>
+                            <p>&nbsp;</p>
+                            <p>I pulled out full sentence entities only and ended up with about 6000 cleaned up text strings.  This dataset lives on my <a href="https://huggingface.co/datasets/jfung53/mensmags" target="_blank">Hugging Face repository</a>.  </p>
+                        </div>
+
+                        <h3 class="section-title">Transformers</h3>
+
+                        <div class="body-text">
+                            <p>To create a text generation pipeline, I wrote about 40 prompts that would be the basis upon which the LLM predicts the next words.  They are sentence starters like "Every man should", "Being a dad means", "A man is", "A real man", etc.</p>
+                            <p>&nbsp;</p>
+                            <p>I used the <strong>Hugging Face Transformers framework</strong> to fine-tune GPT-2.  I set it to 5 epochs and fed it my dataset of sentences.  Then I fed my prompts to the text generation pipeline to get an output of over 1000 statements on what it means to be a man.</p>
+                        </div>
+
+                        <h3 class="section-title">Creating a social media bot</h3>
+
+                        <div class="body-text">
+                            <p>I wrote a Python script to generate an image to post to social media.  It includes a random image pulled via the <strong>Unsplash</strong> API using the search query "man in nature."  I process the photo using <strong>Pillow</strong> and <strong>DrawBot</strong>, with the latter used to create an ASCII art effect to stylize the image.  The generated text is styled and overlaid on top using DrawBot.  </p>
+                            <p>&nbsp;</p>
+                            <p>I had the bot running on Twitter, but decided to take it down in favour of figuring out how to get it working on Instagram.  It's not currently running but will be back in action soon. </p>
+                        </div>
+
+                        <div class="image-with-caption">
+                            <div class="image-frame">
+                                <div class="image-placeholder"></div>
+                                <div class="image-placeholder"></div>
+                                <div class="image-placeholder"></div>
+                            </div>
+                            <p class="caption">What an LLM says about what it means to be a man.</p>
+                        </div>
+
+                        <div class="dotted-line"></div>
+
+                        <p class="body-text">This bot was the final project for a class I took during the Summer 2025 semester.</p>
+
+                        <div class="credits">
+                            <p>INFO 697 How to Build a Bot</p>
+                            <p>Professor Filipa Calado</p>
+                        </div>
+
+                    </article>
+
+                    <!-- Bottom Footer with Navigation -->
+                    <footer class="portfolio-footer">
+                        <div class="dotted-line"></div>
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name">&copy; Jocelyn Fung 2025</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                                <p><a href="../evictions/index.html"><span class="bracket">[ </span><span class="nav-label">Next Project</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

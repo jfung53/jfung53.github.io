@@ -1,13 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
-/*
-* {
-    border: 1px dashed red;
-}
-*/
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+
 :root {
+    /* Home Page Colors */
     --not-black: #2A1D1A;
+    --home-bg: var(--not-black);
+    --home-text: yellow;
+    --home-card-bg: #4d55ff;
+    --home-placeholder: white;
+    
+    /* Common Spacing */
+    --gap-xs: 8px;
+    --gap-sm: 16px;
+    --gap-md: 24px;
+    --gap-lg: 32px;
+    --gap-xl: 48px;
+    --gap-xxl: 72px;
+    
+    /* Common Padding */
+    --padding-card: 40px;
+    --padding-desktop: 72px;
+    --padding-content-desktop: 128px;
+    
+    /* Font Families */
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-display: 'Neue Regrade', 'Arial Black', sans-serif;
+    
+    /* Common Font Sizes */
+    --text-xs: 12px;
+    --text-sm: 16px;
+    --text-md: 18px;
+    --text-lg: 20px;
+    --text-xl: 24px;
+    --text-2xl: 28px;
+    --text-3xl: 40px;
+    --text-4xl: 72px;
+    
+    /* Common Font Weights */
+    --weight-light: 200;
+    --weight-normal: 300;
+    --weight-medium: 400;
+    --weight-semibold: 500;
+    --weight-bold: 600;
+    --weight-extrabold: 700;
+    
+    /* Transitions */
+    --transition-default: 0.2s ease;
 }
 
 @font-face {
@@ -17,24 +59,29 @@
     font-display: swap;
 }
 
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
 body {
-    font-family: 'IBM Plex Mono', monospace;
-    /* background-color: #311e2a; */
-    background-color: var(--not-black);
-    color: yellow;
+    font-family: var(--font-mono);
+    background-color: var(--home-bg);
+    color: var(--home-text);
     overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
 
+/* Common Link Styles - Home Page */
 a:visited {
-    color: yellow;
+    color: var(--home-text);
 }
 
 a:hover {
     color: lightyellow;
 }
 
+/* Common Container Styles */
 .container {
     display: flex;
     align-items: flex-start;
@@ -44,26 +91,29 @@ a:hover {
 }
 
 .desktop {
-    /* background-color: #311e2a; */
-    background-color: var(--not-black);
+    background-color: var(--home-bg);
     width: 1440px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 72px;
+    padding: var(--padding-desktop);
     overflow: hidden;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    gap: 72px;
+    gap: var(--gap-xxl);
     width: 100%;
 }
+
+/* ============================================
+   HOME PAGE - HEADER
+   ============================================ */
 
 .header {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--gap-md);
     width: 100%;
 }
 
@@ -75,11 +125,11 @@ a:hover {
 }
 
 .main-title {
-    font-family: 'Neue Regrade', 'Arial Black', sans-serif;
-    font-weight: 600;
-    font-size: 72px;
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-4xl);
     line-height: normal;
-    color: yellow;
+    color: var(--home-text);
     text-transform: uppercase;
     white-space: pre;
     margin: 0;
@@ -87,25 +137,23 @@ a:hover {
 
 .socials {
     display: flex;
-    gap: 24px;
+    gap: var(--gap-md);
     align-items: center;
-    font-size: 40px;
-    color: yellow;
+    font-size: var(--text-3xl);
+    color: var(--home-text);
     text-transform: uppercase;
     white-space: pre;
 }
 
 .socials p {
     margin: 0;
-    color: yellow;
-    /* transition: color 0.3s ease; */
+    color: var(--home-text);
 }
 
-/* for chrome and safari ios */
 .socials a,
 .socials a:link,
 .socials a:visited {
-    color: yellow;
+    color: var(--home-text);
     text-decoration: none;
 }
 
@@ -113,48 +161,66 @@ a:hover {
     color: lightyellow;
 }
 
-.socials a:visited {
-    color: yellow;
-}
-
 .subtitle {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 500;
-    font-size: 28px;
+    font-family: var(--font-mono);
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-2xl);
     line-height: normal;
     letter-spacing: 0.56px;
-    color: yellow;
+    color: var(--home-text);
     height: 40px;
     width: 1296px;
     max-width: 100%;
     margin: 0;
 }
 
-.location {
+/* Shared Icon + Text Pattern */
+.location,
+.award,
+.content-warning {
     display: flex;
-    gap: 16px;
+    gap: var(--gap-sm);
     align-items: center;
+    white-space: normal;
+}
+
+.location {
     white-space: pre;
 }
 
-.location .icon {
+.location .icon,
+.award .icon {
     font-size: 22px;
     line-height: normal;
-    color: yellow;
+    flex-shrink: 0;
+    color: var(--home-text);
+}
+
+.content-warning {
+    color: var(--accent-color);
+    font-size: var(--text-sm);
+    width: 100%;
+}
+
+.content-warning .icon {
+    font-size: var(--text-sm);
+    line-height: normal;
+    flex-shrink: 0;
 }
 
 .location-text {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 24px;
+    font-family: var(--font-mono);
+    font-size: var(--text-xl);
     line-height: 1.5;
     letter-spacing: 0.96px;
     margin: 0;
 }
 
+/* Blurb Section */
 .blurb {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--gap-xs);
     width: 100%;
 }
 
@@ -166,43 +232,48 @@ a:hover {
     width: 100%;
 }
 
-.bullet {
-    font-family: 'IBM Plex Mono', 'Noto Sans', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
+.bullet,
+.blurb-text {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-normal);
+    font-size: var(--text-sm);
     line-height: 1.5;
-    flex-shrink: 0;
-    white-space: pre;
     margin: 0;
 }
 
+.bullet {
+    flex-shrink: 0;
+    white-space: pre;
+}
+
 .blurb-text {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
     flex: 1;
     min-width: 0;
-    margin: 0;
 }
+
+/* ============================================
+   HOME PAGE - PROJECTS
+   ============================================ */
 
 .projects {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--gap-sm);
     width: 100%;
 }
 
 .project-row {
     display: flex;
-    gap: 16px;
+    gap: var(--gap-sm);
     width: 100%;
 }
 
 .project-card {
-    background-color: #4d55ff;
+    background-color: var(--home-card-bg);
     position: relative;
     flex-shrink: 0;
+    cursor: pointer;
+    transition: transform var(--transition-default), box-shadow var(--transition-default);
 }
 
 .project-card.full-width {
@@ -214,21 +285,40 @@ a:hover {
     min-width: 0;
 }
 
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
 .project-card.coming-soon {
     background-color: transparent;
+    cursor: default;
+}
+
+.project-card.coming-soon:hover {
+    transform: none;
 }
 
 .project-card.coming-soon .project-content {
-    border: 1px solid yellow;
+    border: 1px solid var(--home-text);
     border-radius: 0;
+}
+
+.project-card.coming-soon .chip.filled {
+    color: var(--not-black);
+}
+
+a.project-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .project-content {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    padding: 40px;
+    gap: var(--gap-lg);
+    padding: var(--padding-card);
     width: 100%;
     flex: 1;
     align-items: flex-start;
@@ -236,35 +326,47 @@ a:hover {
 }
 
 .project-title {
-    font-family: 'Neue Regrade', 'Arial Black', sans-serif;
-    font-weight: 600;
-    font-size: 72px;
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-4xl);
     line-height: normal;
-    color: yellow;
+    color: var(--home-text);
     text-transform: uppercase;
     width: 100%;
     margin: 0;
 }
 
 .project-image {
-    background-color: white;
+    background-color: var(--home-placeholder);
     height: 320px;
     width: 100%;
     flex-shrink: 0;
 }
 
 .coming-soon-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 24px;
+    font-family: var(--font-mono);
+    font-size: var(--text-xl);
     letter-spacing: 0.96px;
-    color: yellow;
-    margin: 0;
-    margin-bottom: -8px;
+    color: var(--home-text);
+    margin: 0 0 -8px 0;
 }
+
+.award-text {
+    font-family: var(--font-mono);
+    font-size: var(--text-lg);
+    line-height: 1.5;
+    letter-spacing: 0.96px;
+    margin: 0;
+    white-space: normal;
+}
+
+/* ============================================
+   CHIPS (HOME & PORTFOLIO)
+   ============================================ */
 
 .chips {
     display: flex;
-    gap: 16px;
+    gap: var(--gap-sm);
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
@@ -274,142 +376,584 @@ a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: var(--gap-xs);
     height: 40px;
     padding: 8px 24px 4px 24px;
     border-radius: 20px;
     overflow: hidden;
     flex-shrink: 0;
     white-space: pre;
-    font-family: 'Neue Regrade', 'Arial Black', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
+    font-family: var(--font-display);
+    font-weight: var(--weight-medium);
+    font-size: var(--text-xl);
     line-height: normal;
     letter-spacing: 0.48px;
 }
 
 .chip.filled {
-    background-color: yellow;
-    color: #4d55ff;
+    background-color: var(--home-text);
+    color: var(--home-card-bg);
 }
 
 .chip.outline {
     background-color: transparent;
-    color: yellow;
-    border: 1px solid yellow;
+    color: var(--home-text);
+    border: 1px solid var(--home-text);
     box-sizing: border-box;
 }
 
-.project-card.coming-soon .chip.filled {
-    /* color: #311e2a; */
-    color: var(--not-black);
+/* ============================================
+   HOME PAGE - FOOTER
+   ============================================ */
+
+.footer {
+    margin-top: var(--gap-xxl);
+    text-align: center;
+    padding: var(--gap-md) 0;
 }
 
-.award {
+.footer h6 {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-light);
+    color: var(--home-text);
+    margin: 0;
+    opacity: 0.7;
+}
+
+/* ============================================
+   PORTFOLIO PAGE - BASE STYLES
+   ============================================ */
+
+body.portfolio-page {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.portfolio-page .desktop {
+    background-color: var(--bg-color);
+}
+
+/* ============================================
+   PORTFOLIO PAGE - HEADER & FOOTER
+   ============================================ */
+
+.portfolio-header,
+.portfolio-footer {
     display: flex;
-    gap: 16px;
-    align-items: center;
-    white-space: normal;
+    flex-direction: column;
+    gap: var(--gap-md);
+    width: 100%;
 }
 
-.award .icon {
+.title-bar-portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.portfolio-name {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
     font-size: 22px;
     line-height: normal;
-    flex-shrink: 0;
-    color: yellow;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.44px;
+    white-space: pre;
+    margin: 0;
 }
 
-.award-text {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 20px;
+.portfolio-footer .portfolio-name {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-light);
+    opacity: 0.7;
+}
+
+.portfolio-navigation {
+    display: flex;
+    gap: var(--gap-md);
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 22px;
+    line-height: normal;
+    letter-spacing: 0.44px;
+    text-transform: uppercase;
+    white-space: pre;
+}
+
+.portfolio-navigation p {
+    margin: 0;
+}
+
+.portfolio-navigation a,
+.portfolio-navigation a:visited {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.portfolio-navigation a:hover {
+    color: var(--hover-color);
+}
+
+.portfolio-navigation .bracket {
+    color: var(--accent-color);
+}
+
+.portfolio-navigation .nav-label {
+    color: var(--text-color);
+}
+
+.dotted-line {
+    width: 100%;
+    height: 0;
+    border-top: 1px dashed var(--accent-color);
+}
+
+/* ============================================
+   PORTFOLIO PAGE - MAIN CONTENT
+   ============================================ */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+    padding: 0 var(--padding-content-desktop);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.portfolio-title {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-4xl);
+    line-height: normal;
+    color: var(--text-color);
+    text-transform: uppercase;
+    margin: 0;
+    width: 100%;
+}
+
+/* Portfolio-specific Award & Chips Overrides */
+.portfolio-page .award,
+.portfolio-page .award .icon {
+    color: var(--accent-color);
+}
+
+.portfolio-page .chip.filled {
+    background-color: var(--accent-color);
+    color: var(--chip-filled-text);
+}
+
+.portfolio-page .chip.outline {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+/* ============================================
+   PORTFOLIO PAGE - TEXT STYLES
+   ============================================ */
+
+.intro-text {
+    font-family: var(--font-mono);
+    font-size: var(--text-xl);
     line-height: 1.5;
     letter-spacing: 0.96px;
+    color: var(--text-color);
     margin: 0;
-    white-space: normal;
+    width: 100%;
 }
 
-/* responsiveness */
+.intro-text em {
+    font-style: italic;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-weight: var(--weight-extrabold);
+    font-size: var(--text-xl);
+    line-height: normal;
+    letter-spacing: 0.48px;
+    color: var(--text-color);
+    margin: 0;
+    width: 100%;
+}
+
+.body-text {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-normal);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--text-color);
+    margin: 0;
+    width: 100%;
+}
+
+.body-text p {
+    margin: 0;
+}
+
+.body-text strong {
+    font-weight: var(--weight-extrabold);
+}
+
+.body-text.body-text-small {
+    max-width: 1040px;
+}
+
+.body-text .underline {
+    text-decoration: underline;
+    text-underline-position: from-font;
+}
+
+/* Shared Link Styles for Portfolio Text */
+.intro-text a,
+.body-text a,
+.caption a {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-underline-position: from-font;
+}
+
+.intro-text a:visited,
+.body-text a:visited,
+.caption a:visited {
+    color: var(--text-color);
+}
+
+.intro-text a:hover,
+.body-text a:hover,
+.caption a:hover {
+    color: var(--accent-color);
+}
+
+.classification {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.warning-text {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-normal);
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+}
+
+/* ============================================
+   PORTFOLIO PAGE - IMAGES
+   ============================================ */
+
+.image-with-caption {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+    width: 100%;
+}
+
+.portfolio-page .image-placeholder {
+    background-color: var(--placeholder-color);
+    width: 100%;
+    height: 320px;
+}
+
+.caption {
+    font-family: var(--font-display);
+    font-weight: var(--weight-extrabold);
+    font-size: var(--text-md);
+    line-height: normal;
+    letter-spacing: 0.36px;
+    color: var(--text-color);
+    margin: 0;
+    width: 100%;
+}
+
+.caption p {
+    margin: 0;
+}
+
+.image-two-wide {
+    display: flex;
+    gap: var(--gap-lg);
+    width: 100%;
+}
+
+.image-two-wide .image-with-caption {
+    flex: 1;
+    min-width: 0;
+}
+
+.image-frame {
+    display: flex;
+    gap: var(--gap-xs);
+    width: 100%;
+}
+
+.image-frame .image-placeholder {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ============================================
+   PORTFOLIO PAGE - QUOTATIONS
+   ============================================ */
+
+.quotation {
+    display: flex;
+    gap: var(--gap-md);
+    align-items: center;
+    width: 100%;
+}
+
+.quote-line {
+    width: 2px;
+    height: 100%;
+    min-height: 150px;
+    background-color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    flex: 1;
+}
+
+.quote-text {
+    font-family: var(--font-display);
+    font-weight: var(--weight-extrabold);
+    font-size: var(--text-xl);
+    line-height: normal;
+    letter-spacing: 0.48px;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.quote-author {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-normal);
+    font-style: italic;
+    font-size: var(--text-md);
+    line-height: 1.5;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* ============================================
+   PORTFOLIO PAGE - CREDITS
+   ============================================ */
+
+.credits {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-normal);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--accent-color);
+}
+
+.credits p {
+    margin: 0;
+}
+
+/* ============================================
+   CHART PLACEHOLDER
+   ============================================ */
+
+.chart-placeholder {
+    height: 400px;
+}
+
+/* ============================================
+   PORTFOLIO PAGE - THEME COLORS
+   ============================================ */
+
+/* School Shootings (Red/Brown Theme) */
+body.school-shootings-page {
+    --bg-color: #170d0b;
+    --text-color: floralwhite;
+    --accent-color: #ff3300;
+    --hover-color: #ff5533;
+    --chip-filled-text: #170d0b;
+    --placeholder-color: floralwhite;
+}
+
+/* Citi Bikes (Blue/Red Theme) */
+body.citi-bikes-page {
+    --bg-color: #fefff4;
+    --text-color: #0050b5;
+    --accent-color: #ff3300;
+    --hover-color: #0050b5;
+    --chip-filled-text: #fefff4;
+    --placeholder-color: #0050b5;
+}
+
+.citi-bikes-page .dotted-line {
+    border-top-color: #ff3300;
+}
+
+/* Masculinity Bot (Brown/Gold Theme) */
+body.masculinity-bot-page {
+    --bg-color: #64501c;
+    --text-color: #fefff4;
+    --accent-color: #e7c261;
+    --hover-color: #fefff4;
+    --chip-filled-text: #64501c;
+    --placeholder-color: #fefff4;
+}
+
+/* Evictions (Purple/Green Theme) */
+body.evictions-page {
+    --bg-color: mediumslateblue;
+    --text-color: #fefff4;
+    --accent-color: palegreen;
+    --hover-color: #fefff4;
+    --chip-filled-text: mediumslateblue;
+    --placeholder-color: #fefff4;
+}
+
+/* Pool Incidents (Ivory/Blue/Brown Theme) */
+body.pool-incidents-page {
+    --bg-color: ivory;
+    --text-color: royalblue;
+    --accent-color: saddlebrown;
+    --hover-color: royalblue;
+    --chip-filled-text: ivory;
+    --placeholder-color: royalblue;
+}
+
+/* Historical Map (Olive/Yellow/Green Theme) */
+body.historical-map-page {
+    --bg-color: #8f7e22;
+    --text-color: yellow;
+    --accent-color: greenyellow;
+    --hover-color: yellow;
+    --chip-filled-text: #8f7e22;
+    --placeholder-color: yellow;
+}
+
+/* SHSAT (Cream/Green/Orange Theme) */
+body.shsat-page {
+    --bg-color: #fefff4;
+    --text-color: darkgreen;
+    --accent-color: darkorange;
+    --hover-color: darkgreen;
+    --chip-filled-text: #fefff4;
+    --placeholder-color: darkgreen;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
 @media (max-width: 1440px) {
     .desktop {
         padding: 40px;
     }
     
-    .main-title {
+    .main-title,
+    .project-title,
+    .portfolio-title {
         font-size: 56px;
     }
     
     .subtitle {
-        font-size: 24px;
+        font-size: var(--text-xl);
         width: 100%;
     }
     
-    .project-title {
-        font-size: 56px;
+    .main-content {
+        padding: 0 64px;
     }
 }
 
 @media (max-width: 768px) {
     .desktop {
-        padding: 24px;
+        padding: var(--gap-md);
     }
     
     .content {
-        gap: 48px;
+        gap: var(--gap-xl);
     }
     
     .title-bar {
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
+        gap: var(--gap-sm);
     }
     
-    .main-title {
-        font-size: 40px;
+    .main-title,
+    .project-title,
+    .portfolio-title {
+        font-size: var(--text-3xl);
     }
     
     .socials {
-        font-size: 28px;
-        gap: 16px;
+        font-size: var(--text-2xl);
+        gap: var(--gap-sm);
     }
     
     .subtitle {
-        font-size: 18px;
+        font-size: var(--text-md);
     }
     
     .project-row {
         flex-direction: column;
     }
     
-    .project-title {
-        font-size: 40px;
-    }
-    
     .chip {
-        font-size: 18px;
+        font-size: var(--text-md);
         height: 32px;
         padding: 4px 16px;
     }
     
     .project-content {
-        padding: 24px;
+        padding: var(--gap-md);
     }
 
     .award {
         align-items: flex-start;
     }
-}
-
-.footer {
-    margin-top: 72px;
-    text-align: center;
-    padding: 24px 0;
-}
-
-.footer h6 {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
-    font-weight: 200;
-    color: yellow;
-    margin: 0;
-    opacity: 0.7;
+    
+    .main-content {
+        padding: 0 var(--gap-md);
+    }
+    
+    .portfolio-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--gap-xs);
+        font-size: var(--text-md);
+    }
+    
+    .image-two-wide {
+        flex-direction: column;
+        gap: var(--gap-lg);
+    }
+    
+    .quotation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .quote-line {
+        width: 100%;
+        height: 2px;
+        min-height: 2px;
+    }
+    
+    .intro-text {
+        font-size: var(--text-md);
+    }
+    
+    .section-title {
+        font-size: var(--text-lg);
+    }
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Historical Race Map - Jocelyn Fung</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="portfolio">
+        <meta name="author" content="Jocelyn Fung">
+        <link rel="stylesheet" type="text/css" href="../reset.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    </head>
+
+    <body class="portfolio-page historical-map-page">
+        <div class="container">
+            <div class="desktop">
+                <div class="content">
+                    
+                    <!-- Top Header with Navigation -->
+                    <header class="portfolio-header">
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name">Jocelyn Fung</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                        <div class="dotted-line"></div>
+                    </header>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <h1 class="portfolio-title">Georeferencing a historical race map of Manhattan</h1>
+                        
+                        <div class="chips">
+                            <span class="chip filled">ArcGIS</span>
+                            <span class="chip filled">R</span>
+                            <span class="chip outline">NYPL</span>
+                            <span class="chip outline">US Census</span>
+                        </div>
+
+                        <p class="intro-text">Interpretations of nationality data from more than 100 years ago.</p>
+
+                        <div class="image-with-caption">
+                            <div class="image-placeholder"></div>
+                            <p class="caption">Manhattan's Black population, then and now.</p>
+                        </div>
+
+                        <div class="body-text">
+                            <p>
+                                <span>From the NYPL collection, </span>
+                                <a href="https://digitalcollections.nypl.org/items/92af57f0-f092-0130-74fc-58d385a7b928?canvasIndex=0" target="_blank">Map No. 2 of the Tenement-House Committee</a>
+                                <span> is a specimen from 1895, a striking map design that describes the proportions of nationalities across Manhattan districts.  It is part of a series of six maps showing population data from the 1890 census.  </span>
+                                <a href="https://blogs.loc.gov/maps/2021/12/making-sense-of-the-tenement-house-committee-maps/" target="_blank">It's a puzzling description and rendering that gets more confusing the more you dig into it</a>
+                                <span>.  </span>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>How is this map supposed to be interpreted, and is it even possible to compare it with census data more than 100 years later? </p>
+                        </div>
+
+                        <h3 class="section-title">Decoding the graphics</h3>
+
+                        <div class="body-text">
+                            <p>It's unclear what the exact values of each stripe are meant to be, and whether their width is meant to be proportional within each district in some way.  The legend indicates that these are "principal" proportions (two-thirds of the population), and the nationality classifications raise questions about the racial prejudices of that time.  </p>
+                            <p>&nbsp;</p>
+                            <p>For example, Black people are encoded separately from Natives (i.e. American-born) as though they are mutually exclusive.  This being the Jim Crow era, I wonder how many could actually have been encoded as native-born as well.  </p>
+                            <p>&nbsp;</p>
+                            <p>Black populations (of some ambiguous but significant size) are charted on this map in only two districts, both in the downtown area.  I was curious to compare this with present-day population data to see the differences.  NYC neighbourhoods are still segregated enough today to see on a map.  </p>
+                        </div>
+
+                        <h3 class="section-title">Methods</h3>
+
+                        <div class="body-text">
+                            <p>I georeferenced the 1895 map in <strong>ArcGIS</strong> using Central Park as the main guide.  Some of the street names were labelled which was helpful, but there are some differences in scale that I wasn't able to match completely. </p>
+                            <p>&nbsp;</p>
+                            <p>I used <strong>R</strong> to pull population, nativity, citizenship, and race data from the <strong>US census</strong> (ACS 2022 at the census tract level, the closest aggregation level to the district on the 1895 map).  I adjusted the symbology to show only census tracts where the <strong>proportion of Black residents was 50% of greater</strong>.  The 2022 census data included Randalls and Wards Islands as part of Manhattan, but I chose to exclude them from the analysis since they weren't part of the 1895 map.  </p>
+                        </div>
+
+                        <h3 class="section-title">The final map</h3>
+
+                        <div class="body-text">
+                            <p>Although the census tracts and districts don't line up at all, this didn't matter because Manhattan's Black populations are in completely different places today.  </p>
+                            <p>&nbsp;</p>
+                            <p>Overlaying today's census data (purple) and comparing it to 1890 (yellow), it appears that there are no longer any significant clusters of Black residents downtown.  Instead, the larger proportions of Black residents are concentrated mostly in Harlem.  </p>
+                            <p>&nbsp;</p>
+                            <p>I wonder how and when these changes occurred, and how quickly.  It would be interesting to map census data by year, keeping in mind the collection biases at play throughout the years.  </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Bottom Footer with Navigation -->
+                    <footer class="portfolio-footer">
+                        <div class="dotted-line"></div>
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name">&copy; Jocelyn Fung 2025</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                                <p><a href="../shsat/index.html"><span class="bracket">[ </span><span class="nav-label">Next Project</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

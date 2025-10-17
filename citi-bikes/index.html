@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Citi Bikes Middle Schoolers - Jocelyn Fung</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="portfolio">
+        <meta name="author" content="Jocelyn Fung">
+        <link rel="stylesheet" type="text/css" href="../reset.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    </head>
+
+    <body class="portfolio-page citi-bikes-page">
+        <div class="container">
+            <div class="desktop">
+                <div class="content">
+                    
+                    <!-- Top Header with Navigation -->
+                    <header class="portfolio-header">
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name">Jocelyn Fung</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                        <div class="dotted-line"></div>
+                    </header>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <h1 class="portfolio-title">Are kids under age 16 using citi bikes?</h1>
+                        
+                        <div class="chips">
+                            <span class="chip filled">ArcGIS</span>
+                            <span class="chip filled">R</span>
+                            <span class="chip outline">NYC DOE</span>
+                            <span class="chip outline">Citi Bike Trip Data</span>
+                        </div>
+
+                        <p class="intro-text">Because they shouldn't be.  The answer: signs point to yes.</p>
+
+                        <div class="body-text">
+                            <p>Citi Bikes are great for getting around, but cycling as a mode of transportation is not trivial in New York City. A friend recently asked me if we let our 13 year old use Citi Bikes. Her kid, the same age, had been begging her since "all" his friends are allowed. </p>
+                            <p>&nbsp;</p>
+                            <p>I had also seen one or two anecdotal reports online of children and teens using Citi Bikes. The company policy states that only those 16 and older are permitted to ride, which makes sense for safety and liability reasons. </p>
+                            <p>&nbsp;</p>
+                            <p>I wanted to see if kids younger than 16 are actually taking out Citi Bikes in droves, as my friend's kid claims.</p>
+                        </div>
+
+                        <h3 class="section-title">Middle school locations</h3>
+
+                        <div class="body-text">
+                            <p>Middle school students in New York (grades 6-8, age 11-13) have the luxury of a huge amount of independence. They fit the profile for kids who are <strong>too young</strong> for Citi Bikes but are old enough to likely have their own phones, which means they can download and use the <strong>Citi Bike app</strong>.</p>
+                            <p>&nbsp;</p>
+                            <p>I downloaded the most recent (2021) <a href="https://data.cityofnewyork.us/Education/2021-DOE-Middle-School-Directory/f6s7-vytj/about_data" target="_blank">middle school directory</a> from the NYC Open Data portal which had all the variables I needed including <strong>dismissal time per school</strong>, borough, latitude, and longitude. The earliest dismissal time listed is 1:30 and the latest is 6pm. Out of 474 schools I removed 13 with no dismissal time listed and 20 with dismissal after 4pm to avoid overlapping with rush hour.</p>
+                        </div>
+
+                        <h3 class="section-title">Citi Bike trip data</h3>
+
+                        <div class="body-text">
+                            <p>I downloaded <a href="https://citibikenyc.com/system-data" target="_blank">all the trips</a> from <strong>June</strong> of 2024, the month with the most trips that take place while school is in session.  There were <strong>4,783,657 rides</strong> split over five CSVs.  I merged them and ran a SQL query in ArcGIS to select and remove all the <strong>weekend</strong> rides. </p>
+                            <p>&nbsp;</p>
+                            <p>I separated rides on <strong>school holidays</strong> that fell on weekdays to use as a control.  </p>
+                            <p>&nbsp;</p>
+                            <p>Then I drew a rough polygon of the <strong>Citi Bike boundary</strong> which I used to clip out middle schools that aren't near any Citi Bike stations, and a small amount of ride points that appeared to be noise: far away from any other stations or schools, and in strange places like the Hudson River.</p>
+                        </div>
+
+                        <h3 class="section-title">Approximate walking distance to nearest station</h3>
+
+                        <div class="image-with-caption">
+                            <div class="image-placeholder"></div>
+                            <p class="caption">Finding all the Citi Bike stations within 200 meters of a middle school.</p>
+                        </div>
+
+                        <div class="body-text">
+                            <p>To estimate how far a student would need to walk to get to the closest Citi Bike Station I looked at the ride points and middle schools together.  I eyeballed it and decided on a buffer of <strong>200 meters</strong> around each school.  </p>
+                            <p>&nbsp;</p>
+                            <p>This left me with 342,326 rides on school days and 179,985 rides on school holidays, a <strong>47% decrease</strong>. Most school holidays are not holidays that everyone else gets from work, so I think this says something.  But i wanted to look closer at dismissal time to get more granular. </p>
+                        </div>
+
+                        <h3 class="section-title">Zooming into the dismissal time for each school</h3>
+
+                        <div class="image-with-caption">
+                            <div class="image-placeholder"></div>
+                            <p class="caption">Finding all the Citi Bike stations within 200 meters of a middle school.</p>
+                        </div>
+
+                        <div class="body-text">
+                            <p>Next I compared the differences between trips near dismissal time and a quieter morning time, 10-10:15 AM when kids are in school and rush hour is over.  </p>
+                            <p>&nbsp;</p>
+                            <p>Anecdotally, teachers and staff don't usually leave the building at the same time as students, so I looked for rides within <strong>15 minutes of each school's dismissal time</strong> to rule out teachers and staff.  </p>
+                            <p>&nbsp;</p>
+                            <p>To further rule out any general Citi Bike usage patterns, I wanted to see if rides that are not near enough to any middle schools are subject to similar-sized increases between 10 AM and later in the day.  </p>
+                        </div>
+
+                        <h3 class="section-title">Results</h3>
+
+                        <div class="intro-text results-text">
+                            <p>There is a <strong>55% increase</strong> in Citi bike near middle schools within 15 minutes of dismissal times.  </p>
+                            <p>&nbsp;</p>
+                            <p>This is compared to a 34% increase on school holiday days and 33% increase for trips that aren't near any middle schools.  </p>
+                            <p>&nbsp;</p>
+                            <p><strong>This suggests that students under the age of 16 may indeed be renting Citi Bikes after school</strong>.  This isn't unexpected, since all that's needed to set up an account is a phone number and email address.  Payments can be made using Apple Pay in lieu of a credit card, and when I did this analysis in early 2025 there was no age verification required to use the app.  Unrelated to this project, it was announced that age verification was in development for fall 2025.  </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Bottom Footer with Navigation -->
+                    <footer class="portfolio-footer">
+                        <div class="dotted-line"></div>
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name">&copy; Jocelyn Fung 2025</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                                <p><a href="../masculinity-bot/index.html"><span class="bracket">[ </span><span class="nav-label">Next Project</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
