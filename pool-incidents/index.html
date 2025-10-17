@@ -9,6 +9,18 @@
         <link rel="stylesheet" type="text/css" href="../reset.css">
         <link rel="stylesheet" type="text/css" href="../style.css">
         <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+
+        <!-- connect to chart.js library-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- D3 for loading and transforming an external dataset -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <!-- hammer.js for interactions, needs to go first -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- plugin to zoom in -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.2.0/chartjs-plugin-zoom.min.js" integrity="sha512-FRGbE3pigbYamZnw4+uT4t63+QJOfg4MXSgzPn2t8AWg9ofmFvZ/0Z37ZpCawjfXLBSVX2p2CncsmUH2hzsgJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- linear regression package -->
+        <script src="https://cdn.jsdelivr.net/npm/regression@2.0.1/dist/regression.min.js"></script>
+        
     </head>
 
     <body class="portfolio-page pool-incidents-page">
@@ -53,41 +65,38 @@
                             <p>I was curious to see if there's a relationship between the size of a pool and the number of poop incidents, especially since I frequent a bunch of these in the summer with my two kids. Are there more poop incidents simply because there are more swimmers? Or do some pools just have more offenders, whatever the reason?</p>
                         </div>
 
-                        <h3 class="section-title">Chart 1</h3>
+                        <h3 class="section-title">Types of pools</h3>
 
-                        <div class="image-placeholder chart-placeholder"></div>
+                            <p class="body-text">Distribution of pool types according to size and purpose. It's unclear what "Intermediate" means exactly, but they represent most of the pools. Wading pools are usually on the same property as a larger pool.</p>
+                            <canvas id = "chart1" width="300" height="200"></canvas>
 
-                        <p class="body-text">paragraph</p>
+                        <h3 class="section-title">The largest and smallest pools</h3>
 
-                        <h3 class="section-title">Chart 2</h3>
+                            <p class="body-text">By pool volume in cubic feet.<br/>Click the button to toggle between the two charts.</p>
+                            <button id="chart2-toggle" type="button" onclick="toggle()">switch chart</button>
+                            <canvas id = "chart2" width="300" height="200"></canvas>
 
-                        <div class="image-placeholder chart-placeholder"></div>
+                        <h3 class="section-title">Swimmers per session</h3>
 
-                        <p class="body-text">paragraph</p>
+                            <p class="body-text">Average number of pool attendees per session.  There are usually two sessions per pool, morning and afternoon.  Some pools have a third extended session, but most don't. </p>
+                            <canvas id = "chart3" width="200" height="200"></canvas>
 
-                        <h3 class="section-title">Chart 3</h3>
+                        <h3 class="section-title">Pool closures per week due to poop incidents</h3>
 
-                        <div class="image-placeholder chart-placeholder"></div>
+                            <p class="body-text">The pool seasons opens in the last week of June and runs until mid September.<br/>The parks department defines a Category 1 situation as a solid poop and Category 2 as liquid poop or vomit.  The numbers I ended up with are different than those in the Gothamist article which states that Staten Island's Lyons Pool had 15 poop incidents.</p>
+                            <p class="body-text">It was difficult to accurately count Category 1 incidents outside of the column that incidates that a session opened late because of a problem, so maybe they have more information than I do on how to intepret the data.  There may be many more Category 1 incidents than shown here.  </p>
+                            <canvas id = "chart4" width="600" height="250"></canvas>
 
-                        <p class="body-text">paragraph</p>
+                        <h3 class="section-title">Pools with the most poop incidents</h3>
+                            
+                            <p class="body-text">As mentioned above, these counts are much more accurate for Category 2 situations. I was horrified to see that Red Hook Pool, my usual haunt, is the one that had the most.  </p>
+                            <canvas id = "chart5" width="200" height="90"></canvas>
 
-                        <h3 class="section-title">Chart 4</h3>
+                        <h3 class="section-title">Poop incidents by pool size</h3>
 
-                        <div class="image-placeholder chart-placeholder"></div>
-
-                        <p class="body-text">paragraph</p>
-
-                        <h3 class="section-title">Chart 5</h3>
-
-                        <div class="image-placeholder chart-placeholder"></div>
-
-                        <p class="body-text">paragraph</p>
-
-                        <h3 class="section-title">Chart 6</h3>
-
-                        <div class="image-placeholder chart-placeholder"></div>
-
-                        <p class="body-text">paragraph</p>
+                            <p class="body-text">Do larger pools get more poops? Maybe. This chart shows no statistically significant correlation (r<sup>2</sup> = 0), but without better info about Category 1 situations I'm not sure I'm able to tell for sure.</p>
+                            <p class="body-text">Hover over each dot to see the pool name. Blue dots are pools that may have had no poop incidents at all, but that might be due to errors in my counting method.</p>
+                            <canvas id = "chart6" width="200" height="120"></canvas>
 
                     </article>
 
@@ -106,5 +115,13 @@
                 </div>
             </div>
         </div>
+
+        <script src="chart1.js"></script>
+        <script src="chart2.js"></script>
+        <script src="chart3.js"></script>
+        <script src="chart4.js"></script>
+        <script src="chart5.js"></script>
+        <script src="chart6.js"></script>
+        
     </body>
 </html>

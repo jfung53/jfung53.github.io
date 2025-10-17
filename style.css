@@ -337,10 +337,16 @@ a.project-card {
 }
 
 .project-image {
-    background-color: var(--home-placeholder);
-    height: 320px;
+    background-color: yellow;
     width: 100%;
     flex-shrink: 0;
+    display: block;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .coming-soon-label {

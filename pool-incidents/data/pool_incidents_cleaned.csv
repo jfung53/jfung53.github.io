@@ -1,0 +1,50 @@
+Prop_ID,cubic_feet,Pool,Borough_Name,category_1,category_2,total_incidents
+M193,4500,Abe Lincoln Mini Pool,Manhattan,1,0,1
+M164,21600,Asser Levy Pool,Manhattan,0,0,0
+Q004,217800,Astoria Pool,Queens,0,5,5
+B008,231412.5,Betsy Head Pool,Brooklyn,0,0,0
+B310,13500,Bushwick Pool,Brooklyn,1,2,3
+X008,3289.5,Claremont Pool,Bronx,0,2,2
+B021,13500,Commodore Barry Pool,Brooklyn,0,0,0
+X010,158400,Crotona Pool,Bronx,0,5,5
+B248,2400,David Fox / PS 251 Mini Pool,Brooklyn,0,0,0
+B145,13500,Douglas and DeGraw Pool,Brooklyn,0,2,2
+M270,13500,Dry Dock Pool,Manhattan,0,0,0
+X165,3600,Edenwald Houses Mini Pool,Bronx,0,0,0
+R008,53200,Faber Pool,Staten Island,0,3,3
+Q441,15750,Fisher Pool,Queens,0,2,2
+X307,17056,Floating Pool,Bronx,0,0,0
+X034,15750,Foster Pool,Bronx,0,0,0
+M220,2400,Frederick Douglass Mini Pool,Manhattan,0,0,0
+R067,2400,General Douglas MacArthur Mini Pool,Staten Island,0,0,0
+B236,2400,Glenwood Houses Mini Pool,Brooklyn,0,0,0
+X196,15750,Haffen Pool,Bronx,0,2,2
+M033,56595,Hamilton Fish Pool,Manhattan,0,0,0
+M037,374220,Highbridge Pool,Manhattan,0,0,0
+B260,13500,Howard Pool,Brooklyn,0,4,4
+M014,67445,JHS 57 / HS 26 Mini Pool,Brooklyn,0,1,1
+B269,4125,Jackie Robinson Pool,Manhattan,0,0,0
+M045,28420,John Jay Pool,Manhattan,0,0,0
+B351,92000,Kosciuszko Pool,Brooklyn,0,0,0
+Q121,13500,Liberty Pool,Queens,0,3,3
+B329,2400,Lindower Park Mini Pool,Brooklyn,0,0,0
+R043,57750,Lyons Pool,Staten Island,0,0,0
+R061,4950,Mapes Pool,Bronx,1,3,4
+X289,15750,Marcus Garvey Pool,Manhattan,1,0,1
+M058,49500,Marie Curie Park Mini Pool,Queens,0,0,0
+Q364,2400,McCarren Park Pool,Brooklyn,0,0,0
+B058,228523.4,PS 14 Playground Mini Pool,Staten Island,2,0,2
+Q327,2400,PS 186 Playground Mini Pool,Queens,0,0,0
+B253,2400,PS 20 Playground Mini Pool,Brooklyn,0,0,0
+R063,2400,PS 46 Playground Mini Pool,Staten Island,0,0,0
+B126,171600,Red Hook Pool,Brooklyn,0,9,9
+M190,15750,Sheltering Arms Pool,Manhattan,0,0,0
+B087,146853,Sunset Park Pool,Brooklyn,0,0,0
+M047,92732,Thomas Jefferson Pool,Manhattan,0,0,0
+M088,2400,Tompkins Square Mini Pool,Manhattan,0,0,0
+R110,15750,Tottenville Pool,Staten Island,0,1,1
+X092,61401.6,Van Cortlandt Pool,Bronx,0,0,0
+M069,3289.5,Vesuvio Mini Pool,Manhattan,0,2,2
+M273,15750,Wagner Pool,Manhattan,0,0,0
+R109,15750,West Brighton Pool,Staten Island,0,0,0
+Q031,2400,Windmuller Mini Pool,Queens,0,2,2
