@@ -992,3 +992,29 @@ body.shsat-page .image-placeholder {
         font-size: var(--text-lg);
     }
 }
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+#chart2-toggle {
+    width: 30%;
+    padding: 12px 24px;
+    background-color: var(--home-card-bg);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#chart2-toggle:hover {
+    background-color: #3d45e5;
+}
+
+#chart2-toggle:active {
+    background-color: #2d35cc;
+}
