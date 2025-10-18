@@ -72,7 +72,6 @@ body {
     padding: 0;
 }
 
-/* Common Link Styles - Home Page */
 a:visited {
     color: var(--home-text);
 }
@@ -81,7 +80,10 @@ a:hover {
     color: lightyellow;
 }
 
-/* Common Container Styles */
+/* ============================================
+   COMMON LAYOUT
+   ============================================ */
+
 .container {
     display: flex;
     align-items: flex-start;
@@ -174,7 +176,10 @@ a:hover {
     margin: 0;
 }
 
-/* Shared Icon + Text Pattern */
+/* ============================================
+   SHARED COMPONENTS - ICON + TEXT PATTERN
+   ============================================ */
+
 .location,
 .award,
 .content-warning {
@@ -196,6 +201,20 @@ a:hover {
     color: var(--home-text);
 }
 
+.location-text,
+.award-text {
+    font-family: var(--font-mono);
+    font-size: var(--text-lg);
+    line-height: 1.5;
+    letter-spacing: 0.96px;
+    margin: 0;
+    white-space: normal;
+}
+
+.location-text {
+    font-size: var(--text-xl);
+}
+
 .content-warning {
     color: var(--accent-color);
     font-size: var(--text-sm);
@@ -208,15 +227,18 @@ a:hover {
     flex-shrink: 0;
 }
 
-.location-text {
+.warning-text {
     font-family: var(--font-mono);
-    font-size: var(--text-xl);
+    font-weight: var(--weight-normal);
     line-height: 1.5;
-    letter-spacing: 0.96px;
     margin: 0;
+    flex: 1;
 }
 
-/* Blurb Section */
+/* ============================================
+   HOME PAGE - BLURB SECTION
+   ============================================ */
+
 .blurb {
     display: flex;
     flex-direction: column;
@@ -357,17 +379,8 @@ a.project-card {
     margin: 0 0 -8px 0;
 }
 
-.award-text {
-    font-family: var(--font-mono);
-    font-size: var(--text-lg);
-    line-height: 1.5;
-    letter-spacing: 0.96px;
-    margin: 0;
-    white-space: normal;
-}
-
 /* ============================================
-   CHIPS (HOME & PORTFOLIO)
+   CHIPS (SHARED)
    ============================================ */
 
 .chips {
@@ -542,7 +555,7 @@ body.portfolio-page {
     width: 100%;
 }
 
-/* Portfolio-specific Award & Chips Overrides */
+/* Portfolio-specific overrides for shared components */
 .portfolio-page .award,
 .portfolio-page .award .icon {
     color: var(--accent-color);
@@ -615,7 +628,16 @@ body.portfolio-page {
     text-underline-position: from-font;
 }
 
-/* Shared Link Styles for Portfolio Text */
+.classification {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Portfolio text link styles */
 .intro-text a,
 .body-text a,
 .caption a {
@@ -636,23 +658,6 @@ body.portfolio-page {
     color: var(--accent-color);
 }
 
-.classification {
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    letter-spacing: 0.24px;
-    text-transform: uppercase;
-    color: var(--text-color);
-    margin: 0;
-}
-
-.warning-text {
-    font-family: var(--font-mono);
-    font-weight: var(--weight-normal);
-    line-height: 1.5;
-    margin: 0;
-    flex: 1;
-}
-
 /* ============================================
    PORTFOLIO PAGE - IMAGES
    ============================================ */
@@ -667,7 +672,20 @@ body.portfolio-page {
 .portfolio-page .image-placeholder {
     background-color: var(--placeholder-color);
     width: 100%;
-    height: 320px;
+    display: block;
+}
+
+.portfolio-page .image-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Framed image container (for data visualizations) */
+.image-with-frame {
+    background-color: rgba(255, 250, 240, 0.1);
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 .caption {
@@ -685,6 +703,7 @@ body.portfolio-page {
     margin: 0;
 }
 
+/* Image layout variations */
 .image-two-wide {
     display: flex;
     gap: var(--gap-lg);
@@ -754,7 +773,7 @@ body.portfolio-page {
 }
 
 /* ============================================
-   PORTFOLIO PAGE - CREDITS
+   PORTFOLIO PAGE - CREDITS & MISC
    ============================================ */
 
 .credits {
@@ -769,10 +788,6 @@ body.portfolio-page {
     margin: 0;
 }
 
-/* ============================================
-   CHART PLACEHOLDER
-   ============================================ */
-
 .chart-placeholder {
     height: 400px;
 }
@@ -781,7 +796,6 @@ body.portfolio-page {
    PORTFOLIO PAGE - THEME COLORS
    ============================================ */
 
-/* School Shootings (Red/Brown Theme) */
 body.school-shootings-page {
     --bg-color: #170d0b;
     --text-color: floralwhite;
@@ -791,7 +805,6 @@ body.school-shootings-page {
     --placeholder-color: floralwhite;
 }
 
-/* Citi Bikes (Blue/Red Theme) */
 body.citi-bikes-page {
     --bg-color: #fefff4;
     --text-color: #0050b5;
@@ -805,7 +818,6 @@ body.citi-bikes-page {
     border-top-color: #ff3300;
 }
 
-/* Masculinity Bot (Brown/Gold Theme) */
 body.masculinity-bot-page {
     --bg-color: #64501c;
     --text-color: #fefff4;
@@ -815,7 +827,6 @@ body.masculinity-bot-page {
     --placeholder-color: #fefff4;
 }
 
-/* Evictions (Purple/Green Theme) */
 body.evictions-page {
     --bg-color: mediumslateblue;
     --text-color: #fefff4;
@@ -825,7 +836,6 @@ body.evictions-page {
     --placeholder-color: #fefff4;
 }
 
-/* Pool Incidents (Ivory/Blue/Brown Theme) */
 body.pool-incidents-page {
     --bg-color: ivory;
     --text-color: royalblue;
@@ -835,7 +845,6 @@ body.pool-incidents-page {
     --placeholder-color: royalblue;
 }
 
-/* Historical Map (Olive/Yellow/Green Theme) */
 body.historical-map-page {
     --bg-color: #8f7e22;
     --text-color: yellow;
@@ -845,7 +854,6 @@ body.historical-map-page {
     --placeholder-color: yellow;
 }
 
-/* SHSAT (Cream/Green/Orange Theme) */
 body.shsat-page {
     --bg-color: #fefff4;
     --text-color: darkgreen;
@@ -853,6 +861,10 @@ body.shsat-page {
     --hover-color: darkgreen;
     --chip-filled-text: #fefff4;
     --placeholder-color: darkgreen;
+}
+
+body.shsat-page .image-placeholder {
+    background-color: transparent;
 }
 
 /* ============================================
