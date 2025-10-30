@@ -382,6 +382,16 @@ a.project-card {
     width: 100%;
 }
 
+.chips a,
+.chips a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.chips a:hover .github-icon {
+    color: var(--hover-color);
+}
+
 .chip {
     display: inline-flex;
     align-items: center;
@@ -494,7 +504,8 @@ body.portfolio-page {
     white-space: pre;
 }
 
-.portfolio-navigation p {
+.portfolio-navigation p,
+.prev-next p {
     margin: 0;
 }
 
@@ -522,9 +533,7 @@ body.portfolio-page {
     align-items: center;
 }
 
-.prev-next p {
-    margin: 0;
-}
+/* merged into .portfolio-navigation p, .prev-next p above */
 
 .dotted-line {
     width: 100%;
@@ -573,6 +582,19 @@ body.portfolio-page {
     border: 1px solid var(--accent-color);
 }
 
+.github-icon {
+    font-family: 'Font Awesome 6 Brands', sans-serif;
+    font-size: 40px;
+    color: var(--accent-color);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.github-icon::before {
+    content: "\f09b";
+}
+
+
 /* ============================================
    PORTFOLIO PAGE - TEXT STYLES
    ============================================ */
@@ -612,7 +634,8 @@ body.portfolio-page {
     width: 100%;
 }
 
-.body-text p {
+.body-text p,
+.caption p {
     margin: 0;
 }
 
@@ -718,10 +741,6 @@ body.portfolio-page {
     color: var(--text-color);
     margin: 0;
     width: 100%;
-}
-
-.caption p {
-    margin: 0;
 }
 
 .image-two-wide {
@@ -838,10 +857,6 @@ body.citi-bikes-page {
     --hover-color: #0050b5;
     --chip-filled-text: #fefff4;
     --placeholder-color: #0050b5;
-}
-
-.citi-bikes-page .dotted-line {
-    border-top-color: #ff3300;
 }
 
 /* Masculinity Bot (Brown/Gold Theme) */
@@ -1071,7 +1086,8 @@ body.shsat-page .image-placeholder {
     line-height: normal;
 }
 
-.about-text {
+.about-text,
+.about-paragraph {
     font-family: var(--font-mono);
     font-weight: var(--weight-light);
     line-height: 1.5;
@@ -1080,13 +1096,6 @@ body.shsat-page .image-placeholder {
 
 .about-text p {
     margin-bottom: 0;
-}
-
-.about-paragraph {
-    font-family: var(--font-mono);
-    font-weight: var(--weight-light);
-    line-height: 1.5;
-    color: var(--home-text);
 }
 
 .about-socials {
