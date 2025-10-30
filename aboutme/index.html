@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About Me - Jocelyn Fung</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="portfolio">
+        <meta name="author" content="Jocelyn Fung">
+        <link rel="stylesheet" type="text/css" href="../reset.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    </head>
+
+    <body class="about-page">
+        <div class="container">
+            <div class="desktop">
+                <div class="content">
+                    
+                    <!-- Top Header with Navigation -->
+                    <header class="portfolio-header">
+                        <div class="title-bar-portfolio">
+                            <h2 class="portfolio-name about-title">About me</h2>
+                            <nav class="portfolio-navigation">
+                                <p><a href="../index.html"><span class="bracket">[ </span><span class="nav-label">home</span><span class="bracket"> ]</span></a></p>
+                            </nav>
+                        </div>
+                        <div class="dotted-line"></div>
+                    </header>
+
+                    <!-- Main Content -->
+                    <article class="about-content">
+                        <h1 class="about-hello">Hello</h1>
+                        
+                        <div class="about-text">
+                            <p>I'm Jocelyn, nice to meet you.<br>Thanks for visiting my portfolio of data projects.</p>
+                        </div>
+                        
+                        <p class="about-paragraph">My work centers around finding answers to questions about people and places and is a convergence of design, code, analysis, and GIS.</p>
+                        
+                        <p class="about-paragraph">I'm currently pursuing an MS at Pratt Institute in Data Analytics and Visualization, with an Advanced Certificate in Spatial Analysis (2026). Before this, I was a product designer and creative director in the video game industry.</p>
+                        
+                        <p class="about-paragraph">I'm currently open to new opportunities in NYC or remotely across the US. Let's connect!</p>
+                        
+                        <p class="about-paragraph"><a id="email-link" rel="nofollow noopener">Email me</a> <i class="fa-regular fa-copy" id="copy-email" title="copy email" aria-label="copy email" role="button" tabindex="0" style="cursor: pointer;"></i><span id="copy-confirm" aria-live="polite" style="display:none; opacity: 0; margin-left: 0; transition: opacity 0.4s ease;">copied!</span></p>
+                        <script>
+                            (function () {
+                                var user = "jocelynfung";
+                                var domain = "gmail.com";
+                                var el = document.getElementById("email-link");
+                                if (!el) return;
+                                var email = user + "@" + domain;
+                                el.textContent = "Email me";
+                                el.setAttribute("href", "mailto:" + email);
+
+                                var copyEl = document.getElementById("copy-email");
+                                if (copyEl) {
+                                    var confirmEl = document.getElementById("copy-confirm");
+                                    var fadeDurationMs = 400;
+                                    var visibleDurationMs = 1000;
+                                    var hideTimer = null;
+                                    var finalizeHideTimer = null;
+                                    function clearTimers() {
+                                        if (hideTimer) { window.clearTimeout(hideTimer); hideTimer = null; }
+                                        if (finalizeHideTimer) { window.clearTimeout(finalizeHideTimer); finalizeHideTimer = null; }
+                                    }
+                                    function showInstant(el) {
+                                        var prev = el.style.transition;
+                                        el.style.transition = "none";
+                                        el.style.display = "inline";
+                                        el.style.marginLeft = "6px";
+                                        el.style.opacity = "1";
+                                        // reflow
+                                        void el.offsetWidth;
+                                        el.style.transition = prev;
+                                    }
+                                    function scheduleFadeOut(el) {
+                                        hideTimer = window.setTimeout(function () {
+                                            el.style.opacity = "0";
+                                            finalizeHideTimer = window.setTimeout(function () {
+                                                el.style.display = "none";
+                                                el.style.marginLeft = "0";
+                                            }, fadeDurationMs);
+                                        }, visibleDurationMs);
+                                    }
+                                    var showCopied = function () {
+                                        if (!confirmEl) return;
+                                        clearTimers();
+                                        showInstant(confirmEl);
+                                        scheduleFadeOut(confirmEl);
+                                    };
+                                    var copyToClipboard = function () {
+                                        if (navigator.clipboard && navigator.clipboard.writeText) {
+                                            navigator.clipboard.writeText(email).then(function () {
+                                                showCopied();
+                                            }).catch(function () {
+                                                fallbackCopy();
+                                                showCopied();
+                                            });
+                                        } else {
+                                            fallbackCopy();
+                                            showCopied();
+                                        }
+                                    };
+                                    var fallbackCopy = function () {
+                                        var ta = document.createElement("textarea");
+                                        ta.value = email;
+                                        ta.setAttribute("readonly", "");
+                                        ta.style.position = "fixed";
+                                        ta.style.opacity = "0";
+                                        document.body.appendChild(ta);
+                                        ta.select();
+                                        try { document.execCommand("copy"); } catch (e) {}
+                                        document.body.removeChild(ta);
+                                    };
+                                    copyEl.addEventListener("click", copyToClipboard);
+                                    copyEl.addEventListener("keydown", function (e) {
+                                        if (e.key === "Enter" || e.key === " ") {
+                                            e.preventDefault();
+                                            copyToClipboard();
+                                        }
+                                    });
+                                }
+                            })();
+                        </script>
+
+
+                        <div class="socials about-socials">
+                            <p><a href="https://www.linkedin.com/in/jocelynfung/" target="_blank"><i class="fab fa-linkedin"></i></a></p>
+                            <p><a href="https://www.instagram.com/itsjocelynfung/" target="_blank"><i class="fab fa-instagram"></i></a></p>
+                            <p><a href="https://github.com/jfung53" target="_blank"><i class="fab fa-github"></i></a></p>
+                        </div>
+                    </article>
+
+                    <!-- Footer -->
+                    <footer class="about-footer">
+                        <div class="dotted-line"></div>
+                        <div class="footer">
+                            <h6>&copy; Jocelyn Fung 2025</h6>
+                        </div>
+                    </footer>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
