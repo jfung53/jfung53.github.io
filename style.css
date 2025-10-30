@@ -1,19 +1,22 @@
+/* fonts */
 @import url('https://fonts.googleapis.com/css2?&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-
-/* ============================================
-   CSS CUSTOM PROPERTIES
-   ============================================ */
+@font-face {
+    font-family: 'Neue Regrade';
+    src: url('assets/Neue Regrade Variable.ttf') format('truetype');
+    font-weight: 600 700;
+    font-display: swap;
+}
 
 :root {
-    /* Home Page Colors */
+    /* home page colors */
     --not-black: #2A1D1A;
     --home-bg: var(--not-black);
     --home-text: yellow;
     --home-card-bg: #4d55ff;
     --home-placeholder: white;
     
-    /* Common Spacing */
+    /* spacing */
     --gap-xs: 8px;
     --gap-sm: 16px;
     --gap-md: 24px;
@@ -21,16 +24,16 @@
     --gap-xl: 48px;
     --gap-xxl: 72px;
     
-    /* Common Padding */
+    /* padding */
     --padding-card: 40px;
     --padding-desktop: 72px;
     --padding-content-desktop: 128px;
     
-    /* Font Families */
+    /* fonts */
     --font-mono: 'IBM Plex Mono', monospace;
     --font-display: 'Neue Regrade', 'Arial Black', sans-serif;
     
-    /* Common Font Sizes */
+    /* text sizes */
     --text-xs: 12px;
     --text-sm: 16px;
     --text-md: 18px;
@@ -40,7 +43,7 @@
     --text-3xl: 40px;
     --text-4xl: 72px;
     
-    /* Common Font Weights */
+    /* font weights */
     --weight-light: 200;
     --weight-normal: 300;
     --weight-medium: 400;
@@ -48,16 +51,10 @@
     --weight-bold: 600;
     --weight-extrabold: 700;
     
-    /* Transitions */
+    /* transitions */
     --transition-default: 0.2s ease;
 }
 
-@font-face {
-    font-family: 'Neue Regrade';
-    src: url('assets/Neue Regrade Variable.ttf') format('truetype');
-    font-weight: 600 700;
-    font-display: swap;
-}
 
 /* ============================================
    BASE STYLES
@@ -73,7 +70,7 @@ body {
     padding: 0;
 }
 
-/* Common Link Styles - Home Page */
+/* links */
 
 a, a:visited {
     color: var(--home-text);
@@ -83,7 +80,8 @@ a:hover {
     color: lightyellow;
 }
 
-/* Common Container Styles */
+/* containers */
+
 .container {
     display: flex;
     align-items: flex-start;
@@ -178,7 +176,7 @@ a:hover {
     margin: 0;
 }
 
-/* Shared Icon + Text Pattern */
+/* font awesome 6 icons */
 .location,
 .award,
 .content-warning {
@@ -220,7 +218,7 @@ a:hover {
     margin: 0;
 }
 
-/* Blurb Section */
+/* introductory blurb */
 .blurb {
     display: flex;
     flex-direction: column;
@@ -442,7 +440,7 @@ a.project-card {
 }
 
 /* ============================================
-   PORTFOLIO PAGE - BASE STYLES
+   PROJECT PAGE - BASE STYLES
    ============================================ */
 
 body.portfolio-page {
@@ -455,7 +453,7 @@ body.portfolio-page {
 }
 
 /* ============================================
-   PORTFOLIO PAGE - HEADER & FOOTER
+   PROJECT PAGE - HEADER & FOOTER
    ============================================ */
 
 .portfolio-header,
@@ -533,8 +531,6 @@ body.portfolio-page {
     align-items: center;
 }
 
-/* merged into .portfolio-navigation p, .prev-next p above */
-
 .dotted-line {
     width: 100%;
     height: 0;
@@ -542,7 +538,7 @@ body.portfolio-page {
 }
 
 /* ============================================
-   PORTFOLIO PAGE - MAIN CONTENT
+   PROJECT PAGE - MAIN CONTENT
    ============================================ */
 
 .main-content {
@@ -565,7 +561,6 @@ body.portfolio-page {
     width: 100%;
 }
 
-/* Portfolio-specific Award & Chips Overrides */
 .portfolio-page .award,
 .portfolio-page .award .icon {
     color: var(--accent-color);
@@ -596,7 +591,7 @@ body.portfolio-page {
 
 
 /* ============================================
-   PORTFOLIO PAGE - TEXT STYLES
+   PROJECT PAGE - TEXT STYLES
    ============================================ */
 
 .intro-text {
@@ -652,7 +647,7 @@ body.portfolio-page {
     text-underline-position: from-font;
 }
 
-/* Shared Link Styles for Portfolio Text */
+/* link styles */
 .intro-text a,
 .body-text a,
 .caption a {
@@ -691,7 +686,7 @@ body.portfolio-page {
 }
 
 /* ============================================
-   PORTFOLIO PAGE - IMAGES
+   PROJECT PAGE - IMAGES
    ============================================ */
 
 .image-with-caption {
@@ -713,7 +708,6 @@ body.portfolio-page {
     display: block;
 }
 
-/* Framed Image Container - matches Figma import structure */
 .image-with-frame {
     background-color: rgba(255, 250, 240, 0.1);
     width: 100%;
@@ -766,7 +760,7 @@ body.portfolio-page {
 }
 
 /* ============================================
-   PORTFOLIO PAGE - QUOTATIONS
+   PROJECT PAGE - QUOTES
    ============================================ */
 
 .quotation {
@@ -812,7 +806,7 @@ body.portfolio-page {
 }
 
 /* ============================================
-   PORTFOLIO PAGE - CREDITS
+   PROJECT PAGE - CREDITS
    ============================================ */
 
 .credits {
@@ -836,7 +830,7 @@ body.portfolio-page {
 }
 
 /* ============================================
-   PORTFOLIO PAGE - THEME COLORS
+   PROJECT SPECIFIC THEME COLORS
    ============================================ */
 
 /* School Shootings (Red/Brown Theme) */
