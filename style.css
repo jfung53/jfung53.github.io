@@ -10,7 +10,7 @@
 
 :root {
     /* home page colors */
-    --not-black: #2A1D1A;
+    --not-black: #231E31;
     --home-bg: var(--not-black);
     --home-text: yellow;
     --home-card-bg: #4d55ff;
