@@ -1051,7 +1051,7 @@ body.shsat-page .image-placeholder {
     --text-color: yellow;
     --accent-color: yellow;
     --hover-color: lightyellow;
-    background-color: var(--bg-color);
+    background-color: var(--not-black);
 }
 
 .about-title {
