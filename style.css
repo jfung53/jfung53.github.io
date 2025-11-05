@@ -135,6 +135,7 @@ a:hover {
     text-transform: uppercase;
     white-space: pre;
     margin: 0;
+    margin-bottom: -0.2em;
 }
 
 .socials {
