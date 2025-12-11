@@ -4,12 +4,28 @@ body {
     margin: auto;
     background: #011017;
     font-family: Helvetica, sans-serif;
+    letter-spacing: 4%;
     color: floralwhite;
-    letter-spacing: 4%
 }
 
 .container {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+}
+
+/* SVG text styling */
+svg text {
+    fill: floralwhite;
+}
+
+/* Tooltip text styling - make tooltip text black */
+svg g[aria-label="tip"] g[transform] text,
+svg g[aria-label="tip"] g[transform] tspan {
+    fill: black !important;
+    color: black !important;
+}
+
+svg g[aria-label="tip"] g[transform] {
+    color: black !important;
 }
