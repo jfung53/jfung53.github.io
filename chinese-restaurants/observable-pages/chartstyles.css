@@ -5,5 +5,11 @@ body {
     background: #011017;
     font-family: Helvetica, sans-serif;
     color: floralwhite;
-    letter-spacing: 4%;
+    letter-spacing: 4%
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
