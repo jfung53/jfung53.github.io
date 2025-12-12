@@ -16,22 +16,22 @@
 
     <body>
     <div class="container">
-        <!-- cluster outlier heatmap -->
-        <div id="observablehq-plotStates2-ec082f3e"></div>
         <!-- pink dot chart -->
-        <div id="observablehq-plotClusterOutlierResults-bb99104b"></div>      
+        <div id="observablehq-plotStates2-ec082f3e"></div>
+        <!-- cluster outlier heatmap -->
+        <div id="observablehq-plotClusterOutlierResults-9899a492"></div>    
     </div>
-
-    <!-- cluster outlier heatmap -->
+    
+    <!-- cluster/outlier script -->
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/9e0db61d4557638f@103.js?v=4";
+    import define from "https://api.observablehq.com/d/9e0db61d4557638f@105.js?v=4";
     new Runtime().module(define, name => {
-        if (name === "plotClusterOutlierResults") return new Inspector(document.querySelector("#observablehq-plotClusterOutlierResults-bb99104b"));
+      if (name === "plotClusterOutlierResults") return new Inspector(document.querySelector("#observablehq-plotClusterOutlierResults-9899a492"));
     });
     </script>
 
-    <!-- pink dot chart -->
+    <!-- pink dot script -->
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
     import define from "https://api.observablehq.com/d/395319ced922dba9@119.js?v=4";
