@@ -15,25 +15,31 @@
     </head>
 
     <body>
-
-        <!-- <div class="container">
-        <div id="observablehq-plotStates-47e3b805"></div>
-        </div>
-        <script type="module">
-            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-            import define from "https://api.observablehq.com/d/395319ced922dba9@110.js?v=4";
-            new Runtime().module(define, name => {
-                if (name === "plotStates") return new Inspector(document.querySelector("#observablehq-plotStates-47e3b805"));
-            });
-        </script> -->
-
+    <div class="container">
+        <!-- cluster outlier heatmap -->
         <div id="observablehq-plotStates2-ec082f3e"></div>
-        <script type="module">
-            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-            import define from "https://api.observablehq.com/d/395319ced922dba9@119.js?v=4";
-            new Runtime().module(define, name => {
-                if (name === "plotStates2") return new Inspector(document.querySelector("#observablehq-plotStates2-ec082f3e"));
-            });
-        </script>
-</body>
+        <!-- pink dot chart -->
+        <div id="observablehq-plotClusterOutlierResults-bb99104b"></div>      
+    </div>
+
+    <!-- cluster outlier heatmap -->
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/9e0db61d4557638f@103.js?v=4";
+    new Runtime().module(define, name => {
+        if (name === "plotClusterOutlierResults") return new Inspector(document.querySelector("#observablehq-plotClusterOutlierResults-bb99104b"));
+    });
+    </script>
+
+    <!-- pink dot chart -->
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/395319ced922dba9@119.js?v=4";
+    new Runtime().module(define, name => {
+        if (name === "plotStates2") return new Inspector(document.querySelector("#observablehq-plotStates2-ec082f3e"));
+        });
+    </script>
+
+
+    </body>
 </html>
